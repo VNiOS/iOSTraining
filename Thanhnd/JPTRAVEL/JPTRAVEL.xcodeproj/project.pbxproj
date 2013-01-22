@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0306F916AE526700D08B93 /* EventCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0306F816AE526700D08B93 /* EventCustomCell.m */; };
+		DF03070916AE66C600D08B93 /* CKRefreshArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070516AE66C600D08B93 /* CKRefreshArrowView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		DF03070A16AE66C600D08B93 /* CKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070816AE66C600D08B93 /* CKRefreshControl.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		DF03070C16AE689700D08B93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF03070B16AE689700D08B93 /* QuartzCore.framework */; };
 		DF314A5616A7D6A600DA9E30 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF314A5516A7D6A600DA9E30 /* ImageIO.framework */; };
 		DF314A6316A7E48B00DA9E30 /* ListPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */; };
 		DF36A31816A8EE5600ED8675 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = DF314AD016A8035000DA9E30 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -63,6 +67,9 @@
 		DFDFA1F816A6900D0040B2C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDFA1D916A6900D0040B2C0 /* Foundation.framework */; };
 		DFDFA20016A6900D0040B2C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFDFA1FE16A6900D0040B2C0 /* InfoPlist.strings */; };
 		DFDFA20316A6900D0040B2C0 /* JPTRAVELTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDFA20216A6900D0040B2C0 /* JPTRAVELTests.m */; };
+		DFE1121216AE74C20000EEE7 /* BaseApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1121116AE74C20000EEE7 /* BaseApiService.m */; };
+		DFE1121516AE74DE0000EEE7 /* TimelineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1121416AE74DE0000EEE7 /* TimelineService.m */; };
+		DFE1121816AE87120000EEE7 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1121716AE87120000EEE7 /* Util.m */; };
 		DFE7112B16ACECA500509293 /* ListPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE7112A16ACECA500509293 /* ListPlaceController.xib */; };
 		DFE7112F16ACED7800509293 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7112E16ACED7800509293 /* BaseViewController.m */; };
 		DFE7113216ACEE6800509293 /* TimelineControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113116ACEE6800509293 /* TimelineControllerViewController.m */; };
@@ -74,7 +81,6 @@
 		DFE7115716AD3A2C00509293 /* BaseHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115616AD3A2C00509293 /* BaseHttpRequest.m */; };
 		DFE7115A16AD3AB700509293 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115916AD3AB700509293 /* BaseCell.m */; };
 		DFE7115D16AD3C7300509293 /* CommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115C16AD3C7300509293 /* CommonSizes.m */; };
-		DFE7116616AD469800509293 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7116516AD469800509293 /* EventCell.m */; };
 		DFE7116916AD46C300509293 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7116816AD46C300509293 /* PostCell.m */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +95,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0306F716AE526700D08B93 /* EventCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCustomCell.h; sourceTree = "<group>"; };
+		DF0306F816AE526700D08B93 /* EventCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCustomCell.m; sourceTree = "<group>"; };
+		DF03070416AE66C600D08B93 /* CKRefreshArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshArrowView.h; sourceTree = "<group>"; };
+		DF03070516AE66C600D08B93 /* CKRefreshArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRefreshArrowView.m; sourceTree = "<group>"; };
+		DF03070616AE66C600D08B93 /* CKRefreshControl-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKRefreshControl-Prefix.pch"; sourceTree = "<group>"; };
+		DF03070716AE66C600D08B93 /* CKRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshControl.h; sourceTree = "<group>"; };
+		DF03070816AE66C600D08B93 /* CKRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRefreshControl.m; sourceTree = "<group>"; };
+		DF03070B16AE689700D08B93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DF314A5516A7D6A600DA9E30 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DF314A6016A7E48B00DA9E30 /* ListPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPlaceController.h; sourceTree = "<group>"; };
 		DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPlaceController.m; sourceTree = "<group>"; };
@@ -191,6 +205,12 @@
 		DFDFA1FF16A6900D0040B2C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFDFA20116A6900D0040B2C0 /* JPTRAVELTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPTRAVELTests.h; sourceTree = "<group>"; };
 		DFDFA20216A6900D0040B2C0 /* JPTRAVELTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPTRAVELTests.m; sourceTree = "<group>"; };
+		DFE1121016AE74C20000EEE7 /* BaseApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseApiService.h; sourceTree = "<group>"; };
+		DFE1121116AE74C20000EEE7 /* BaseApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApiService.m; sourceTree = "<group>"; };
+		DFE1121316AE74DE0000EEE7 /* TimelineService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineService.h; sourceTree = "<group>"; };
+		DFE1121416AE74DE0000EEE7 /* TimelineService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineService.m; sourceTree = "<group>"; };
+		DFE1121616AE87120000EEE7 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		DFE1121716AE87120000EEE7 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		DFE7112A16ACECA500509293 /* ListPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPlaceController.xib; sourceTree = "<group>"; };
 		DFE7112D16ACED7800509293 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DFE7112E16ACED7800509293 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -211,8 +231,6 @@
 		DFE7115916AD3AB700509293 /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
 		DFE7115B16AD3C7300509293 /* CommonSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSizes.h; sourceTree = "<group>"; };
 		DFE7115C16AD3C7300509293 /* CommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSizes.m; sourceTree = "<group>"; };
-		DFE7116416AD469800509293 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
-		DFE7116516AD469800509293 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 		DFE7116716AD46C300509293 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		DFE7116816AD46C300509293 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF03070C16AE689700D08B93 /* QuartzCore.framework in Frameworks */,
 				DF36A37216A95D9D00ED8675 /* MapKit.framework in Frameworks */,
 				DF314A5616A7D6A600DA9E30 /* ImageIO.framework in Frameworks */,
 				DF68D23B16A7B6CE00652671 /* libz.dylib in Frameworks */,
@@ -247,9 +266,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF03070316AE66C600D08B93 /* CKRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				DF03070416AE66C600D08B93 /* CKRefreshArrowView.h */,
+				DF03070516AE66C600D08B93 /* CKRefreshArrowView.m */,
+				DF03070616AE66C600D08B93 /* CKRefreshControl-Prefix.pch */,
+				DF03070716AE66C600D08B93 /* CKRefreshControl.h */,
+				DF03070816AE66C600D08B93 /* CKRefreshControl.m */,
+			);
+			path = CKRefreshControl;
+			sourceTree = "<group>";
+		};
 		DF314A5716A7E3E400DA9E30 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DFE1120E16AE743F0000EEE7 /* ApiService */,
 				DF36A33116A8EFC900ED8675 /* entity */,
 				DF314A5816A7E3E400DA9E30 /* controller */,
 				DF314A5916A7E3E400DA9E30 /* customview */,
@@ -276,10 +308,10 @@
 			children = (
 				DFE7115816AD3AB700509293 /* BaseCell.h */,
 				DFE7115916AD3AB700509293 /* BaseCell.m */,
-				DFE7116416AD469800509293 /* EventCell.h */,
-				DFE7116516AD469800509293 /* EventCell.m */,
 				DFE7116716AD46C300509293 /* PostCell.h */,
 				DFE7116816AD46C300509293 /* PostCell.m */,
+				DF0306F716AE526700D08B93 /* EventCustomCell.h */,
+				DF0306F816AE526700D08B93 /* EventCustomCell.m */,
 			);
 			path = customview;
 			sourceTree = "<group>";
@@ -291,6 +323,8 @@
 				DF36A33916A8F47900ED8675 /* JsonParser.m */,
 				DFE7115B16AD3C7300509293 /* CommonSizes.h */,
 				DFE7115C16AD3C7300509293 /* CommonSizes.m */,
+				DFE1121616AE87120000EEE7 /* Util.h */,
+				DFE1121716AE87120000EEE7 /* Util.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -358,8 +392,7 @@
 				DF314AE616A8035000DA9E30 /* SBJsonWriter.h */,
 				DF314AE716A8035000DA9E30 /* SBJsonWriter.m */,
 			);
-			name = SBJSON;
-			path = Library/SBJSON;
+			path = SBJSON;
 			sourceTree = "<group>";
 		};
 		DF36A33116A8EFC900ED8675 /* entity */ = {
@@ -412,6 +445,8 @@
 		DF68D25E16A7BCA600652671 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DF314ACE16A8035000DA9E30 /* SBJSON */,
+				DF03070316AE66C600D08B93 /* CKRefreshControl */,
 				DF36A34F16A95C6A00ED8675 /* SDWebImage */,
 				DF68D25F16A7BCEA00652671 /* ASIHTTPRequest */,
 			);
@@ -468,7 +503,6 @@
 		DFDFA1C816A6900D0040B2C0 = {
 			isa = PBXGroup;
 			children = (
-				DF314ACE16A8035000DA9E30 /* SBJSON */,
 				DF68D25E16A7BCA600652671 /* Library */,
 				DFDFA1DD16A6900D0040B2C0 /* JPTRAVEL */,
 				DFDFA1FB16A6900D0040B2C0 /* JPTRAVELTests */,
@@ -489,6 +523,7 @@
 		DFDFA1D616A6900D0040B2C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF03070B16AE689700D08B93 /* QuartzCore.framework */,
 				DF36A37116A95D9D00ED8675 /* MapKit.framework */,
 				DF314A5516A7D6A600DA9E30 /* ImageIO.framework */,
 				DF68D23A16A7B6CE00652671 /* libz.dylib */,
@@ -546,6 +581,17 @@
 				DFDFA1FE16A6900D0040B2C0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFE1120E16AE743F0000EEE7 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				DFE1121016AE74C20000EEE7 /* BaseApiService.h */,
+				DFE1121116AE74C20000EEE7 /* BaseApiService.m */,
+				DFE1121316AE74DE0000EEE7 /* TimelineService.h */,
+				DFE1121416AE74DE0000EEE7 /* TimelineService.m */,
+			);
+			path = ApiService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -706,8 +752,13 @@
 				DFE7115716AD3A2C00509293 /* BaseHttpRequest.m in Sources */,
 				DFE7115A16AD3AB700509293 /* BaseCell.m in Sources */,
 				DFE7115D16AD3C7300509293 /* CommonSizes.m in Sources */,
-				DFE7116616AD469800509293 /* EventCell.m in Sources */,
 				DFE7116916AD46C300509293 /* PostCell.m in Sources */,
+				DF0306F916AE526700D08B93 /* EventCustomCell.m in Sources */,
+				DF03070916AE66C600D08B93 /* CKRefreshArrowView.m in Sources */,
+				DF03070A16AE66C600D08B93 /* CKRefreshControl.m in Sources */,
+				DFE1121216AE74C20000EEE7 /* BaseApiService.m in Sources */,
+				DFE1121516AE74DE0000EEE7 /* TimelineService.m in Sources */,
+				DFE1121816AE87120000EEE7 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

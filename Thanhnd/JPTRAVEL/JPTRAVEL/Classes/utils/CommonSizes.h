@@ -12,5 +12,9 @@
 
 //define size for timeline cell
 extern const int SZTimelineHeight;
-extern const int SZTimelineWith;
+extern const int SZTimelineWidth;
+extern const int SZImagePostThumbX;
+extern const int SZImagePostThumbY;
+extern const int SZImagePostThumbHeight;
+extern const int SZImagePostThumbWidth;
 @end

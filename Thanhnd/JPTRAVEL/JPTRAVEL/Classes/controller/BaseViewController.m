@@ -35,4 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) doRefresh:(CKRefreshControl *)sender
+{
+    //Do common task here
+}
+
 @end

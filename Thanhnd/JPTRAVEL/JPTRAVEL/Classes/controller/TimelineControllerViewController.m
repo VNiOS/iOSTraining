@@ -15,6 +15,9 @@
 #import <UIImageView+WebCache.h>
 #import "PostCell.h"
 #import "TimelineEntity.h"
+#import "EventCustomCell.h"
+#import <CKRefreshControl/CKRefreshControl.h>
+
 @interface TimelineControllerViewController (){
     ASIHTTPRequest *requestData;
     SBJsonStreamParserAdapter *jsonAdapter;
@@ -46,18 +49,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
+    #pragma mark - JSON init
     jsonAdapter = [[SBJsonStreamParserAdapter alloc] init];
-    
     jsonAdapter.delegate = self;
-    
     parser = [[SBJsonStreamParser alloc] init];
-    
     parser.delegate = jsonAdapter;
-    
     parser.supportMultipleDocuments = YES;
     
+    #pragma mark - Pull to refresh init
+    CKRefreshControl *refreshControl = [CKRefreshControl new];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"AloAlo"];
+    [refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
+    
+    #pragma mark - Request init
     requestData = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.japantravel.icapps.co/timeline?limit=20&offset=1"]];
     requestData.delegate = self;
     [requestData setDidFinishSelector:@selector(didFinishSelector:)];
@@ -100,25 +104,34 @@
     JsonParser *jsParser = [[JsonParser alloc] init];
     lstTimeline = [[jsParser getListTimeline:dict] retain];
     [tableViewTimeline reloadData];
-   // NSLog(@"count: %d",[lstTimeline count]);
 }
 
 @end
 
 @implementation TimelineControllerViewController (UITableViewDelegate)
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *keyPostId = @"postItem";
-    PostCell *cell = [tableViewTimeline dequeueReusableCellWithIdentifier:keyPostId];
-    if (cell == nil) {
-        cell = [[[PostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyPostId] autorelease];
-    }
+{   
     TimelineEntity *timelineEntity = [lstTimeline objectAtIndex:indexPath.row];
     if(timelineEntity && [timelineEntity.itemType isEqualToString:@"post"])
     {
-        [cell updateContent:timelineEntity];
+        static NSString *keyPostId = @"postItem";
+        PostCell *cellPost = [tableViewTimeline dequeueReusableCellWithIdentifier:keyPostId];
+        if (cellPost == nil) {
+            cellPost = [[[PostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyPostId] autorelease];
+        }
+        [cellPost updateContent:timelineEntity];
+        return cellPost;
     }
-    return cell;
+    if (timelineEntity && [timelineEntity.itemType isEqualToString:@"event"]) {
+        static NSString *keyEventId = @"eventItem";
+        PostCell *cellEvent = [tableViewTimeline dequeueReusableCellWithIdentifier:keyEventId];
+        if (cellEvent == nil) {
+            cellEvent = [[[PostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyEventId] autorelease];
+        }
+        [cellEvent updateContent:timelineEntity];
+        return cellEvent;
+    }
+    return nil;
 }
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
