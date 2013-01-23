@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class JTViewController;
+@class JTTimeLineViewController;
 
 @interface JTAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,4 +17,5 @@
 
 @property (strong, nonatomic) JTViewController *viewController;
 
+@property (strong, nonatomic) JTTimeLineViewController *timelineController;
 @end

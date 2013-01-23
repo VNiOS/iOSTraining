@@ -14,8 +14,7 @@
 {
     UITableView *_tableview;
     NSMutableArray *_listPlace;
-    
-    
+
     SBJsonStreamParser *paser;
     SBJsonStreamParserAdapter *adapter;
 }

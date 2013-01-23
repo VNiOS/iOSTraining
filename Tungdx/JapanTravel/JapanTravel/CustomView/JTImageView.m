@@ -16,17 +16,17 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-
     }
     return self;
 }
 - (void)loadImageFromUrl:(NSURL *)url
 {
-    [self.imageView setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+    [self.imageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"noAvatar.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
         if(!error)
-            [self setBackgroundImage:image forState:UIControlStateNormal];
+        {
+            [self setImage:image forState:UIControlStateNormal];
+        }
     }];
-    
 }
 
 - (void)dealloc

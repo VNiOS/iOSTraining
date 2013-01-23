@@ -39,6 +39,8 @@
 - (void)dealloc
 {
     [super dealloc];
+    [self.placeImage release];
+    [self.placeName release];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

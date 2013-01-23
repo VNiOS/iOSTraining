@@ -9,13 +9,14 @@
 #import "JTAppDelegate.h"
 
 #import "JTViewController.h"
-
+#import "JTTimeLineViewController.h"
 @implementation JTAppDelegate
 
 - (void)dealloc
 {
     [_window release];
     [_viewController release];
+    [_timelineController release];
     [super dealloc];
 }
 
@@ -24,9 +25,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 //    self.viewController = [[[JTViewController alloc] initWithNibName:@"JTViewController" bundle:nil] autorelease];
-    self.viewController = [[JTViewController alloc] init];
-    [self.viewController.view setFrame:CGRectMake(0, 0, 320, 460)];
-    self.window.rootViewController = self.viewController;
+//    self.viewController = [[JTViewController alloc] init];
+//    [self.viewController.view setFrame:CGRectMake(0, 0, 320, 460)];
+    
+    self.timelineController = [[JTTimeLineViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    self.window.rootViewController = self.timelineController;
     [self.window makeKeyAndVisible];
     return YES;
 }

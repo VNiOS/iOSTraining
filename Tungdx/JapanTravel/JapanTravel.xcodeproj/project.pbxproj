@@ -55,6 +55,13 @@
 		B803DD6316AD51B20020064C /* JTImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6216AD51B20020064C /* JTImageView.m */; };
 		B803DD6616AD52810020064C /* JTPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6516AD52810020064C /* JTPlaceCell.m */; };
 		B884FC7216AD587400C917B3 /* PlaceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B884FC7116AD587400C917B3 /* PlaceEntity.m */; };
+		B8AC424D16AE2EC500F88294 /* JTTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */; };
+		B8AC425116AE2F8B00F88294 /* JTTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC425016AE2F8B00F88294 /* JTTimelineCell.m */; };
+		B8AC428816AE402200F88294 /* noAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8AC428716AE402200F88294 /* noAvatar.png */; };
+		B8CA371B16AE45D4001D4C37 /* JTCommonUltils.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA371A16AE45D4001D4C37 /* JTCommonUltils.m */; };
+		B8CA371E16AE516F001D4C37 /* PostingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA371D16AE516F001D4C37 /* PostingEntity.m */; };
+		B8CA378216AE6CF7001D4C37 /* EventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA378116AE6CF7001D4C37 /* EventEntity.m */; };
+		B8CA378516AE7A59001D4C37 /* JTJsonUltils.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +157,19 @@
 		B803DD6516AD52810020064C /* JTPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPlaceCell.m; sourceTree = "<group>"; };
 		B884FC7016AD587400C917B3 /* PlaceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceEntity.h; sourceTree = "<group>"; };
 		B884FC7116AD587400C917B3 /* PlaceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceEntity.m; sourceTree = "<group>"; };
+		B8AC424B16AE2EC500F88294 /* JTTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTimeLineViewController.h; sourceTree = "<group>"; };
+		B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTimeLineViewController.m; sourceTree = "<group>"; };
+		B8AC424F16AE2F8B00F88294 /* JTTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTimelineCell.h; sourceTree = "<group>"; };
+		B8AC425016AE2F8B00F88294 /* JTTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTimelineCell.m; sourceTree = "<group>"; };
+		B8AC428716AE402200F88294 /* noAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noAvatar.png; sourceTree = "<group>"; };
+		B8CA371916AE45D4001D4C37 /* JTCommonUltils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCommonUltils.h; sourceTree = "<group>"; };
+		B8CA371A16AE45D4001D4C37 /* JTCommonUltils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCommonUltils.m; sourceTree = "<group>"; };
+		B8CA371C16AE516F001D4C37 /* PostingEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostingEntity.h; sourceTree = "<group>"; };
+		B8CA371D16AE516F001D4C37 /* PostingEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostingEntity.m; sourceTree = "<group>"; };
+		B8CA378016AE6CF7001D4C37 /* EventEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventEntity.h; sourceTree = "<group>"; };
+		B8CA378116AE6CF7001D4C37 /* EventEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventEntity.m; sourceTree = "<group>"; };
+		B8CA378316AE7A59001D4C37 /* JTJsonUltils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTJsonUltils.h; sourceTree = "<group>"; };
+		B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTJsonUltils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,12 +227,16 @@
 		B803DC6F16AD48640020064C /* JapanTravel */ = {
 			isa = PBXGroup;
 			children = (
+				B8CA371716AE45AA001D4C37 /* Ultils */,
+				B8AC428516AE402200F88294 /* Resources */,
 				B884FC6E16AD585500C917B3 /* entity */,
 				B803DD6016AD51960020064C /* CustomView */,
 				B803DC7816AD48640020064C /* JTAppDelegate.h */,
 				B803DC7916AD48640020064C /* JTAppDelegate.m */,
 				B803DC8116AD48640020064C /* JTViewController.h */,
 				B803DC8216AD48640020064C /* JTViewController.m */,
+				B8AC424B16AE2EC500F88294 /* JTTimeLineViewController.h */,
+				B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */,
 				B803DC7016AD48640020064C /* Supporting Files */,
 			);
 			path = JapanTravel;
@@ -344,6 +368,8 @@
 				B803DD6216AD51B20020064C /* JTImageView.m */,
 				B803DD6416AD52810020064C /* JTPlaceCell.h */,
 				B803DD6516AD52810020064C /* JTPlaceCell.m */,
+				B8AC424F16AE2F8B00F88294 /* JTTimelineCell.h */,
+				B8AC425016AE2F8B00F88294 /* JTTimelineCell.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -353,8 +379,39 @@
 			children = (
 				B884FC7016AD587400C917B3 /* PlaceEntity.h */,
 				B884FC7116AD587400C917B3 /* PlaceEntity.m */,
+				B8CA371C16AE516F001D4C37 /* PostingEntity.h */,
+				B8CA371D16AE516F001D4C37 /* PostingEntity.m */,
+				B8CA378016AE6CF7001D4C37 /* EventEntity.h */,
+				B8CA378116AE6CF7001D4C37 /* EventEntity.m */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		B8AC428516AE402200F88294 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8AC428616AE402200F88294 /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8AC428616AE402200F88294 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				B8AC428716AE402200F88294 /* noAvatar.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		B8CA371716AE45AA001D4C37 /* Ultils */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA371916AE45D4001D4C37 /* JTCommonUltils.h */,
+				B8CA371A16AE45D4001D4C37 /* JTCommonUltils.m */,
+				B8CA378316AE7A59001D4C37 /* JTJsonUltils.h */,
+				B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */,
+			);
+			path = Ultils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +470,7 @@
 				B803DC7C16AD48640020064C /* Default.png in Resources */,
 				B803DC7E16AD48640020064C /* Default@2x.png in Resources */,
 				B803DC8016AD48640020064C /* Default-568h@2x.png in Resources */,
+				B8AC428816AE402200F88294 /* noAvatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +517,12 @@
 				B803DD6316AD51B20020064C /* JTImageView.m in Sources */,
 				B803DD6616AD52810020064C /* JTPlaceCell.m in Sources */,
 				B884FC7216AD587400C917B3 /* PlaceEntity.m in Sources */,
+				B8AC424D16AE2EC500F88294 /* JTTimeLineViewController.m in Sources */,
+				B8AC425116AE2F8B00F88294 /* JTTimelineCell.m in Sources */,
+				B8CA371B16AE45D4001D4C37 /* JTCommonUltils.m in Sources */,
+				B8CA371E16AE516F001D4C37 /* PostingEntity.m in Sources */,
+				B8CA378216AE6CF7001D4C37 /* EventEntity.m in Sources */,
+				B8CA378516AE7A59001D4C37 /* JTJsonUltils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

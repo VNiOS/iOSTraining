@@ -106,10 +106,10 @@
     
     PlaceEntity *place = [self.listPlace objectAtIndex:indexPath.row];
     [cell.placeName setText:place.placeName];
-
+    [cell.placeName setTag:0];
     [cell.placeImage loadImageFromUrl:[NSURL URLWithString:place.imageUrl]];
     [cell.placeImage setPhotoId:place.placeId];
-
+    [cell.placeImage setTag:1];
     return cell;
 }
 
