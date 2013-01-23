@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CKRefreshControl/CKRefreshControl.h"
 @interface BaseViewController : UIViewController
-
+-(void) doRefresh:(CKRefreshControl *)sender;
 @end
