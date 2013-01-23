@@ -1,14 +1,14 @@
 //
-//  TimelineControllerViewController.h
+//  TimelineController.h
 //  JPTRAVEL
 //
 //  Created by Thanhnd on 1/21/13.
 //  Copyright (c) 2013 Thanhnd. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
 
-@interface TimelineControllerViewController : BaseViewController<UITableViewDataSource>
+@interface TimelineController : BaseTableViewController
 {
     
 }

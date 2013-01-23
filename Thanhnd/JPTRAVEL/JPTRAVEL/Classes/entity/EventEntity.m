@@ -24,8 +24,8 @@
             if([dict valueForKey:@"description"] != (id)[NSNull null] && [[dict valueForKey:@"description"] length] != 0){
                 self.description = [dict objectForKey:@"description"];
             }
-            if([dict valueForKey:@"image_url"] != (id)[NSNull null] && [[dict valueForKey:@"image_url"] length] != 0){
-                self.imageUrl = [dict objectForKey:@"image_url"];
+            if([dict valueForKey:@"image"] != (id)[NSNull null] && [[dict valueForKey:@"image"] length] != 0){
+                self.imageUrl = [dict objectForKey:@"image"];
             }
             if([dict valueForKey:@"name"] != (id)[NSNull null] && [[dict valueForKey:@"name"] length] != 0){
                 self.name = [dict objectForKey:@"name"];

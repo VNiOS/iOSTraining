@@ -28,18 +28,18 @@
         imgPlace = [[UIImageView alloc] initWithFrame:CGRectMake(SZImagePostThumbX, SZImagePostThumbY, SZImagePostThumbWidth, SZImagePostThumbHeight)];
         [self.contentView addSubview:imgPlace];
         
-        lblPlaceName = [[UILabel alloc]initWithFrame:CGRectMake(100, 10, 120, 15)];
+        lblPlaceName = [[UILabel alloc]initWithFrame:CGRectMake(SZPlaceNameEventNameX, SZPlaceNameEventNameY, SZPlaceNameEventNameWidth, SZPlaceNameEventNameHeight)];
         [lblPlaceName setBackgroundColor:[UIColor clearColor]];
         [lblPlaceName setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:lblPlaceName];
         
-        lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(100, 30, 120, 15)];
+        lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(SZDescriptionX, SZDescriptionY, SZDescriptionWidth, SZDescriptionHeight)];
         [lblDescription setBackgroundColor:[UIColor clearColor]];
         [lblDescription setFont:[UIFont systemFontOfSize:11]];
         lblDescription.numberOfLines = 3;
         [self.contentView addSubview:lblDescription];
         
-        lblTime = [[UILabel alloc] initWithFrame:CGRectMake(260, 70, 60, 15)];
+        lblTime = [[UILabel alloc] initWithFrame:CGRectMake(SZTimeX, SZTimeY, SZTimeWidth, SZTimeHeight)];
         [lblTime setBackgroundColor:[UIColor clearColor]];
         [lblTime setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblTime];
@@ -54,8 +54,17 @@
     if (timelineEntity) {
         [imgPlace setImageWithURL:[NSURL URLWithString:timelineEntity.event.imageUrl] placeholderImage:[UIImage imageNamed:@"icon.png"]];
         [lblPlaceName setText:timelineEntity.event.name];
+        [lblDescription setText:timelineEntity.event.description];
         [lblTime setText:[NSString stringWithFormat:@"Time: %@ - %@",timelineEntity.event.startTime,timelineEntity.event.endTime]];
     }
+}
+-(void)dealloc
+{
+    [super dealloc];
+    [imgPlace release];
+    [lblDescription release];
+    [lblPlaceName release];
+    [lblTime release];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

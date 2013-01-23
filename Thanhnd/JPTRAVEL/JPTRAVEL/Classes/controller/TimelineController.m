@@ -1,12 +1,12 @@
 //
-//  TimelineControllerViewController.m
+//  TimelineController.m
 //  JPTRAVEL
 //
 //  Created by Thanhnd on 1/21/13.
 //  Copyright (c) 2013 Thanhnd. All rights reserved.
 //
 
-#import "TimelineControllerViewController.h"
+#import "TimelineController.h"
 #import "ASIHTTPRequest.h"
 #import <SBJson/SBJson.h>
 #import <SBJson/SBJsonStreamParserAdapter.h>
@@ -18,7 +18,7 @@
 #import "EventCustomCell.h"
 #import <CKRefreshControl/CKRefreshControl.h>
 
-@interface TimelineControllerViewController (){
+@interface TimelineController (){
     ASIHTTPRequest *requestData;
     SBJsonStreamParserAdapter *jsonAdapter;
     SBJsonStreamParser *parser;
@@ -27,13 +27,13 @@
 
 @end
 
-@interface TimelineControllerViewController (SBJsonStreamParserAdapterDelegate) <SBJsonStreamParserAdapterDelegate>
+@interface TimelineController (SBJsonStreamParserAdapterDelegate) <SBJsonStreamParserAdapterDelegate>
 
 @end
-@interface TimelineControllerViewController (UITableViewDelegate) <UITableViewDelegate>
+@interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
 
 @end
-@implementation TimelineControllerViewController
+@implementation TimelineController
 @synthesize tableViewTimeline;
 
 
@@ -92,7 +92,7 @@
 }
 @end
 
-@implementation TimelineControllerViewController (SBJsonStreamParserAdapterDelegate)
+@implementation TimelineController (SBJsonStreamParserAdapterDelegate)
 
 - (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray*)array
 {
@@ -104,11 +104,12 @@
     JsonParser *jsParser = [[JsonParser alloc] init];
     lstTimeline = [[jsParser getListTimeline:dict] retain];
     [tableViewTimeline reloadData];
+    NSLog(@"Dict: %@",dict);
 }
 
 @end
 
-@implementation TimelineControllerViewController (UITableViewDelegate)
+@implementation TimelineController (UITableViewDelegate)
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     TimelineEntity *timelineEntity = [lstTimeline objectAtIndex:indexPath.row];
@@ -124,9 +125,9 @@
     }
     if (timelineEntity && [timelineEntity.itemType isEqualToString:@"event"]) {
         static NSString *keyEventId = @"eventItem";
-        PostCell *cellEvent = [tableViewTimeline dequeueReusableCellWithIdentifier:keyEventId];
+        EventCustomCell *cellEvent = [tableViewTimeline dequeueReusableCellWithIdentifier:keyEventId];
         if (cellEvent == nil) {
-            cellEvent = [[[PostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyEventId] autorelease];
+            cellEvent = [[[EventCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyEventId] autorelease];
         }
         [cellEvent updateContent:timelineEntity];
         return cellEvent;
@@ -144,7 +145,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 90;
 }
 
 @end

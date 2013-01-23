@@ -28,36 +28,36 @@
         imgPlace = [[UIImageView alloc] initWithFrame:CGRectMake(SZImagePostThumbX, SZImagePostThumbY, SZImagePostThumbWidth, SZImagePostThumbHeight)];
         [self.contentView addSubview:imgPlace];
         
-        lblUserName = [[UILabel alloc]initWithFrame:CGRectMake(100, 10, 120, 15)];
+        lblUserName = [[UILabel alloc]initWithFrame:CGRectMake(SZUserNameX, SZUserNameY, SZUserNameWidth, SZUserNameHeight)];
         [lblUserName setBackgroundColor:[UIColor clearColor]];
         [lblUserName setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:lblUserName];
         
-        lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(100, 30, 120, 15)];
+        lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(SZDescriptionX, SZDescriptionY, SZDescriptionWidth, SZDescriptionHeight)];
         [lblDescription setBackgroundColor:[UIColor clearColor]];
         [lblDescription setFont:[UIFont systemFontOfSize:11]];
         lblDescription.numberOfLines = 3;
         [self.contentView addSubview:lblDescription];
         
-        lblCommentCount = [[UILabel alloc] initWithFrame:CGRectMake(100, 60, 80, 15)];
+        lblCommentCount = [[UILabel alloc] initWithFrame:CGRectMake(SZCommentCountX, SZCommentCountY, SZCommentCountWidth, SZCommentCountHeight)];
         [lblCommentCount setBackgroundColor:[UIColor clearColor]];
         [lblCommentCount setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblCommentCount];
         
-        lblBookmarkCount = [[UILabel alloc] initWithFrame:CGRectMake(200, 60, 80, 15)];
+        lblBookmarkCount = [[UILabel alloc] initWithFrame:CGRectMake(SZBookmarkCountX, SZBookmarkCountY, SZCommentCountWidth, SZBookmarkCountHeight)];
         [lblBookmarkCount setBackgroundColor:[UIColor clearColor]];
         [lblBookmarkCount setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblBookmarkCount];
         
-        lblPlaceName = [[UILabel alloc] initWithFrame:CGRectMake(100, 75, 120, 15)];
+        lblPlaceName = [[UILabel alloc] initWithFrame:CGRectMake(SZPlaceNameX, SZPlaceNameY, SZPlaceNameWidth, SZPlaceNameHeight)];
         [lblPlaceName setBackgroundColor:[UIColor clearColor]];
         [lblPlaceName setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:lblPlaceName];
         
-        imgUserAvatar = [[UIImageView alloc] initWithFrame:CGRectMake(260, 15, 50, 50)];
+        imgUserAvatar = [[UIImageView alloc] initWithFrame:CGRectMake(SZUserAvatarX, SZUserAvatarY, SZUserAvatarWidth, SZUserAvatarHeight)];
         [self.contentView addSubview:imgUserAvatar];
         
-        lblPostedAt = [[UILabel alloc] initWithFrame:CGRectMake(260, 70, 60, 15)];
+        lblPostedAt = [[UILabel alloc] initWithFrame:CGRectMake(SZPostAtX, SZPostAtY, SZPostAtWidth, SZPostAtHeight)];
         [lblPostedAt setBackgroundColor:[UIColor clearColor]];
         [lblPostedAt setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblPostedAt];
@@ -85,8 +85,8 @@
         [imgPlace setImageWithURL:[NSURL URLWithString:timelineEntity.post.postThumbUrl] placeholderImage:[UIImage imageNamed:@"icon.png"]];
         [lblUserName setText:timelineEntity.user.userName];
         [lblDescription setText:timelineEntity.post.description];
-        [lblCommentCount setText:[NSString stringWithFormat:@"%d comments",timelineEntity.post.commentCount]];
-        [lblBookmarkCount setText:[NSString stringWithFormat:@"%d likes",timelineEntity.post.bookmarkCount]];
+        [lblCommentCount setText:[NSString stringWithFormat:@"Comment %d",timelineEntity.post.commentCount]];
+        [lblBookmarkCount setText:[NSString stringWithFormat:@"Bookmark %d",timelineEntity.post.bookmarkCount]];
         [lblPlaceName setText:timelineEntity.post.placeName];
         [imgUserAvatar setImageWithURL:[NSURL URLWithString:timelineEntity.user.userAvatar] placeholderImage:[UIImage imageNamed:@"icon.png"]];
         [lblPostedAt setText:timelineEntity.post.postedAt];

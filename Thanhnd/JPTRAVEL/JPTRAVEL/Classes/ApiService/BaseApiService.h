@@ -26,8 +26,10 @@ enum  {
     APIGetMethod            = 0,
     APIPostMethod           = 1
 };
+
 #pragma mark - DECLARE PROPERTY
-@property (nonatomic, retain) ASIHTTPRequest *httpRequest;
+@property (nonatomic, retain) ASIHTTPRequest *httpRequestGet;
+@property (nonatomic, retain) ASIFormDataRequest *httpRequestPost;
 @property (nonatomic, retain) JsonParser *jsonParser;
 @property (nonatomic, retain) id<BaseApiServiceDelegate> baseApiServicDelegate;
 #pragma mark - DECLARE METHOD
@@ -38,4 +40,6 @@ enum  {
 -(id) init:(NSDictionary *)params withMethod:(NSString *) methodName andType:(int) type deleage:(id) delegate;
 
 -(ASIHTTPRequest *) buildRequestGet:(ASIHTTPRequest *)request withParams:(NSDictionary *)params;
+
+-(ASIFormDataRequest *) buildRequestPost:(ASIFormDataRequest *)request withParams:(NSDictionary *)params;
 @end

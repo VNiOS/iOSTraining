@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF01A0FE16AFE48A00BD5342 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF01A0FD16AFE48A00BD5342 /* BaseTableViewController.m */; };
 		DF0306F916AE526700D08B93 /* EventCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0306F816AE526700D08B93 /* EventCustomCell.m */; };
 		DF03070916AE66C600D08B93 /* CKRefreshArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070516AE66C600D08B93 /* CKRefreshArrowView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DF03070A16AE66C600D08B93 /* CKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070816AE66C600D08B93 /* CKRefreshControl.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -72,7 +73,7 @@
 		DFE1121816AE87120000EEE7 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1121716AE87120000EEE7 /* Util.m */; };
 		DFE7112B16ACECA500509293 /* ListPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE7112A16ACECA500509293 /* ListPlaceController.xib */; };
 		DFE7112F16ACED7800509293 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7112E16ACED7800509293 /* BaseViewController.m */; };
-		DFE7113216ACEE6800509293 /* TimelineControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113116ACEE6800509293 /* TimelineControllerViewController.m */; };
+		DFE7113216ACEE6800509293 /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113116ACEE6800509293 /* TimelineController.m */; };
 		DFE7113416ACEE8200509293 /* TimelineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE7113316ACEE8200509293 /* TimelineController.xib */; };
 		DFE7113716ACF1E800509293 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113616ACF1E800509293 /* UserEntity.m */; };
 		DFE7113A16ACFCE600509293 /* EventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113916ACFCE600509293 /* EventEntity.m */; };
@@ -82,6 +83,7 @@
 		DFE7115A16AD3AB700509293 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115916AD3AB700509293 /* BaseCell.m */; };
 		DFE7115D16AD3C7300509293 /* CommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115C16AD3C7300509293 /* CommonSizes.m */; };
 		DFE7116916AD46C300509293 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7116816AD46C300509293 /* PostCell.m */; };
+		DFF16C4C16AFA1BE0080F7F5 /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF16C4B16AFA1BE0080F7F5 /* test.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF01A0FC16AFE48A00BD5342 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		DF01A0FD16AFE48A00BD5342 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		DF0306F716AE526700D08B93 /* EventCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCustomCell.h; sourceTree = "<group>"; };
 		DF0306F816AE526700D08B93 /* EventCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCustomCell.m; sourceTree = "<group>"; };
 		DF03070416AE66C600D08B93 /* CKRefreshArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshArrowView.h; sourceTree = "<group>"; };
@@ -214,8 +218,8 @@
 		DFE7112A16ACECA500509293 /* ListPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPlaceController.xib; sourceTree = "<group>"; };
 		DFE7112D16ACED7800509293 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DFE7112E16ACED7800509293 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		DFE7113016ACEE6800509293 /* TimelineControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineControllerViewController.h; sourceTree = "<group>"; };
-		DFE7113116ACEE6800509293 /* TimelineControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineControllerViewController.m; sourceTree = "<group>"; };
+		DFE7113016ACEE6800509293 /* TimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineController.h; sourceTree = "<group>"; };
+		DFE7113116ACEE6800509293 /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
 		DFE7113316ACEE8200509293 /* TimelineController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineController.xib; sourceTree = "<group>"; };
 		DFE7113516ACF1E800509293 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
 		DFE7113616ACF1E800509293 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 		DFE7115C16AD3C7300509293 /* CommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSizes.m; sourceTree = "<group>"; };
 		DFE7116716AD46C300509293 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		DFE7116816AD46C300509293 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		DFF16C4B16AFA1BE0080F7F5 /* test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,8 +302,10 @@
 				DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */,
 				DFE7112D16ACED7800509293 /* BaseViewController.h */,
 				DFE7112E16ACED7800509293 /* BaseViewController.m */,
-				DFE7113016ACEE6800509293 /* TimelineControllerViewController.h */,
-				DFE7113116ACEE6800509293 /* TimelineControllerViewController.m */,
+				DFE7113016ACEE6800509293 /* TimelineController.h */,
+				DFE7113116ACEE6800509293 /* TimelineController.m */,
+				DF01A0FC16AFE48A00BD5342 /* BaseTableViewController.h */,
+				DF01A0FD16AFE48A00BD5342 /* BaseTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 			children = (
 				DFE7112A16ACECA500509293 /* ListPlaceController.xib */,
 				DFE7113316ACEE8200509293 /* TimelineController.xib */,
+				DFF16C4B16AFA1BE0080F7F5 /* test.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -672,6 +680,7 @@
 				DF36A37416A95E6100ED8675 /* icon.png in Resources */,
 				DFE7112B16ACECA500509293 /* ListPlaceController.xib in Resources */,
 				DFE7113416ACEE8200509293 /* TimelineController.xib in Resources */,
+				DFF16C4C16AFA1BE0080F7F5 /* test.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,7 +753,7 @@
 				DF36A36D16A95C6A00ED8675 /* UIButton+WebCache.m in Sources */,
 				DF36A36E16A95C6A00ED8675 /* UIImageView+WebCache.m in Sources */,
 				DFE7112F16ACED7800509293 /* BaseViewController.m in Sources */,
-				DFE7113216ACEE6800509293 /* TimelineControllerViewController.m in Sources */,
+				DFE7113216ACEE6800509293 /* TimelineController.m in Sources */,
 				DFE7113716ACF1E800509293 /* UserEntity.m in Sources */,
 				DFE7113A16ACFCE600509293 /* EventEntity.m in Sources */,
 				DFE7113D16AD164900509293 /* TimelineEntity.m in Sources */,
@@ -759,6 +768,7 @@
 				DFE1121216AE74C20000EEE7 /* BaseApiService.m in Sources */,
 				DFE1121516AE74DE0000EEE7 /* TimelineService.m in Sources */,
 				DFE1121816AE87120000EEE7 /* Util.m in Sources */,
+				DF01A0FE16AFE48A00BD5342 /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,7 +874,7 @@
 				GCC_PREFIX_HEADER = "JPTRAVEL/JPTRAVEL-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "JPTRAVEL/JPTRAVEL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Library\"";
@@ -886,7 +896,7 @@
 				GCC_PREFIX_HEADER = "JPTRAVEL/JPTRAVEL-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "JPTRAVEL/JPTRAVEL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Library\"";

@@ -8,11 +8,11 @@
 
 #import "AppDelegate.h"
 #import "ListPlaceController.h"
-#import "TimelineControllerViewController.h"
+#import "TimelineController.h"
 
 @interface AppDelegate ()
 @property (nonatomic, retain) ListPlaceController *listPlaceController;
-@property (nonatomic, retain) TimelineControllerViewController *timelineController;
+@property (nonatomic, retain) TimelineController *timelineController;
 @end
 
 @implementation AppDelegate
@@ -27,7 +27,7 @@
     
     //Khoi tao view
     self.listPlaceController = [[ListPlaceController alloc] initWithNibName:@"ListPlaceController" bundle:nil];
-    self.timelineController = [[TimelineControllerViewController alloc] initWithNibName:@"TimelineController" bundle:nil];
+    self.timelineController = [[TimelineController alloc] initWithNibName:@"TimelineController" bundle:nil];
     
     //[self.window addSubview:self.listPlaceController.view];
     [self.window addSubview:self.timelineController.view];
