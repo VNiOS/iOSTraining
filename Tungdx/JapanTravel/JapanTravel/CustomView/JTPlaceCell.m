@@ -24,7 +24,7 @@
 - (void)initView
 {
     self.placeImage = [[JTImageView alloc] initWithFrame:CGRectMake(10, 10, 80, 80)];
-    [self.placeImage addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.placeImage addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.placeImage];
     
     self.placeName = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 200, 100)];

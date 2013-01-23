@@ -13,8 +13,11 @@
     
 }
 
-+ (void)time:(NSDate *)date;
++ (NSString *)timefrom:(NSDate *)startDate toDate:(NSDate *)date;
 
 + (CGSize)contentSizewithText:(NSString *)text andConstrainedSize:(CGSize)contrainedSize andFontSize:(CGFloat)fontSize;
-
++ (CGSize)contentSizewithTextBold:(NSString *)text andConstrainedSize:(CGSize)contrainedSize andFontSize:(CGFloat)fontSize;
++ (float)iosVersion;
++ (NSString *)convertDateToString:(NSDate *)date;
++ (NSDate *)convertStringToDate:(NSString *)string;
 @end

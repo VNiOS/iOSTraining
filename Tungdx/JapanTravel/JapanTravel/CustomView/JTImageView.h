@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JTImageView : UIButton
+@interface JTImageView : UIImageView
 {
     NSString *_photoId;
 }

@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "SBJson.h"
-#import "RootViewController.h"
-
+#import "PullToRefreshTableViewController.h"
+#import "JTTimelineCell.h"
 @class ASIHTTPRequest;
 
-@interface JTTimeLineViewController : RootViewController <SBJsonStreamParserAdapterDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface JTTimeLineViewController : PullToRefreshTableViewController <SBJsonStreamParserAdapterDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
     int offset;
     ASIHTTPRequest *requestTimeline;
     
-    NSMutableArray *listTimeline;
+    NSMutableArray *_listTimeline;
+    BOOL hasmore;
+    BOOL isRefresh;
 }
+
+@property (nonatomic, retain) NSMutableArray *listTimeline;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "EventEntity.h"
-
+#import "JTCommonUltils.h"
 @implementation EventEntity
 @synthesize eventId=_eventId, eventName=_eventName, eventDescription=_eventDescription, imageUrl=_imageUrl, startTime=_startTime, endTime=_endTime;
 
@@ -19,25 +19,25 @@
         self.eventId = [dict objectForKey:@"id"];
         self.eventName = [dict objectForKey:@"name"];
         self.eventDescription = [dict objectForKey:@"description"];
-        self.imageUrl = [dict objectForKey:@"image_url"];
-        self.startTime = [dict objectForKey:@"start_time"];
-        self.endTime = [dict objectForKey:@"end_time"];
+        self.imageUrl = [dict objectForKey:@"image"];
+        self.startTime = [dict objectForKey:@"start_at"];
+        self.endTime = [dict objectForKey:@"end_at"];
+
+        NSDate *date = [JTCommonUltils convertStringToDate:self.startTime];
+        NSLog(@"%@",date);
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [super dealloc];
+
     [self.eventId release];
-    self.eventId = nil;
     [self.eventName release];
-    self.eventName = nil;
     [self.eventDescription release];
-    self.eventDescription = nil;
     [self.startTime release];
-    self.startTime = nil;
     [self.endTime release];
-    self.endTime = nil;
+    
+    [super dealloc];
 }
 @end

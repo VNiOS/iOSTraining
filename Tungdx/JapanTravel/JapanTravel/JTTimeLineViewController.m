@@ -14,13 +14,15 @@
 #import "PostingEntity.h"
 #import "EventEntity.h"
 #import "JTCommonUltils.h"
+#import "JTLoadMoreCell.h"
+
 
 @interface JTTimeLineViewController ()
 
 @end
 
 @implementation JTTimeLineViewController
-
+@synthesize listTimeline=_listTimeline;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,7 +37,9 @@
     self = [super initWithStyle:style];
     if(self)
     {
-        
+        self.listTimeline = [[NSMutableArray alloc] init];
+        self.reloading = NO;
+        hasmore = YES;
     }
     return self;
 }
@@ -43,18 +47,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView setSeparatorStyle:UITableViewCellSelectionStyleGray];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    offset = 1;
+    offset = 0;
     [self requestTimeline];
 	// Do any additional setup after loading the view.
 }
 
 - (void)requestTimeline
 {
+    if(offset<1)
+        offset = 1;
     NSString *urlString = [NSString stringWithFormat:@"%@%d",@"http://api.japantravel.icapps.co/timeline?limit=20&offset=",offset];
+    NSLog(@"url: %@",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
+    if(requestTimeline && ![requestTimeline complete])
+    {
+        [requestTimeline clearDelegatesAndCancel];
+        [requestTimeline release];
+        requestTimeline = nil;
+    }
     requestTimeline = [[ASIHTTPRequest alloc] initWithURL:url];
     requestTimeline.delegate = self;
     [requestTimeline setDidFailSelector:@selector(getTimelineFailed:)];
@@ -71,30 +83,43 @@
 
 - (void)parser:(SBJsonStreamParser *)parser foundObject:(NSDictionary *)dict
 {
+    
     NSString *success = [dict objectForKey:@"status"];
     if([success isEqualToString:@"success"])
     {
-        if([dict objectForKey:@"data"] != [NSNull class])
+        if(![[dict objectForKey:@"data"] isKindOfClass:[NSNull class]]) 
         {
-            if(!listTimeline)
-                listTimeline = [[NSMutableArray alloc] init];
+            NSMutableArray *temp = [[NSMutableArray alloc] init];
             NSMutableArray *timelines = [[dict objectForKey:@"data"] objectForKey:@"timeline"];
             for (NSDictionary *timeline in timelines ) {
                 if([[timeline objectForKey:@"item_type"] isEqualToString:@"post"])
                 {
                     PostingEntity *entity = [[PostingEntity alloc] initwithDictionary:timeline];
-                    [listTimeline addObject:entity];
+                    [temp addObject:entity];
                     [entity release];
                 }
                 else if([[timeline objectForKey:@"item_type"] isEqualToString:@"event"])
                 {
                     EventEntity *entity = [[EventEntity alloc] initwithDictionary:timeline];
-                    [listTimeline addObject:entity];
+                    [temp addObject:entity];
                     [entity release];
                 }
             }
+            if(self.reloading)
+            {
+                [self.listTimeline removeAllObjects];
+            }
+            [self.listTimeline addObjectsFromArray:temp];
+            [temp release];
+            temp = nil;
+        }
+        else
+        {
+            hasmore = NO;
         }
     }
+    if(self.reloading)
+        [self dataSourceDidFinishLoadingNewData];
     [self.tableView reloadData];
 }
 
@@ -106,6 +131,8 @@
 - (void)getTimelineFailed:(ASIHTTPRequest *)request
 {
     NSLog(@"failed");
+    if(self.reloading)
+        [self dataSourceDidFinishLoadingNewData];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -122,37 +149,71 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [listTimeline count];
+    return [self.listTimeline count]+1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([[listTimeline objectAtIndex:indexPath.row] isKindOfClass:[PostingEntity class]])
+    if(indexPath.row<self.listTimeline.count)
     {
-        PostingEntity *entity = (PostingEntity *)[listTimeline objectAtIndex:indexPath.row];
-        return 10 + 20 +10 +[JTCommonUltils contentSizewithText:entity.description andConstrainedSize:CGSizeMake(150, 1000) andFontSize:14].height + 10 +20+20+10;
+        return [JTTimelineCell cellHeight:[self.listTimeline objectAtIndex:indexPath.row]];
     }
     else
     {
-        EventEntity *entity = (EventEntity *)[listTimeline objectAtIndex:indexPath.row];
-        return 10 + 20 +[JTCommonUltils contentSizewithText:entity.eventDescription andConstrainedSize:CGSizeMake(200, 1000) andFontSize:14].height + 10;
+        if (hasmore)
+            return 60;
     }
     return 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"timelineCell";
-    JTTimelineCell *cell;
-    cell = (JTTimelineCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if(!cell)
+
+    if(indexPath.row<self.listTimeline.count)
     {
-        cell = [[JTTimelineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        static NSString *cellIdentifier = @"timelineCell";
+        JTTimelineCell *cell;
+        cell = (JTTimelineCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if(!cell)
+        {
+            cell = [[JTTimelineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        NSObject *entity = [self.listTimeline objectAtIndex:indexPath.row];
+        [cell fillDataCellfromObject:entity];
+        return cell;
     }
-    
-    NSObject *entity = [listTimeline objectAtIndex:indexPath.row];
-    [cell fillDataCellfromObject:entity];
-    
-    return cell;
+    else
+    {
+        UITableViewCell *cell;
+        if(self.listTimeline.count>0 && hasmore && !self.reloading)
+        {
+            static NSString *CellIdentifier = @"ShowMoreNewCell";
+            JTLoadMoreCell *cellMore;
+            cellMore = [[[JTLoadMoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: CellIdentifier] autorelease];
+            
+            [self performSelector:@selector(loadmore)];
+            return cellMore;
+        }
+        else
+        {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nil"] autorelease];
+        }
+        return cell;
+    }
+    return nil;
+}
+
+- (void) reloadTableViewDataSource
+{
+    offset = 0;
+    hasmore = YES;
+    [self requestTimeline];
+}
+
+
+- (void)loadmore
+{
+    offset += 1;
+    [self requestTimeline];
 }
 
 @end

@@ -62,6 +62,14 @@
 		B8CA371E16AE516F001D4C37 /* PostingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA371D16AE516F001D4C37 /* PostingEntity.m */; };
 		B8CA378216AE6CF7001D4C37 /* EventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA378116AE6CF7001D4C37 /* EventEntity.m */; };
 		B8CA378516AE7A59001D4C37 /* JTJsonUltils.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */; };
+		B8CA387416AEA4EE001D4C37 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA386C16AEA4EE001D4C37 /* blackArrow.png */; };
+		B8CA387516AEA4EE001D4C37 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA386D16AEA4EE001D4C37 /* blueArrow.png */; };
+		B8CA387616AEA4EE001D4C37 /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA386E16AEA4EE001D4C37 /* blueArrow_new.png */; };
+		B8CA387716AEA4EE001D4C37 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA387016AEA4EE001D4C37 /* EGORefreshTableHeaderView.m */; };
+		B8CA387816AEA4EE001D4C37 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA387216AEA4EE001D4C37 /* PullToRefreshTableViewController.m */; };
+		B8CA387916AEA4EE001D4C37 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA387316AEA4EE001D4C37 /* whiteArrow.png */; };
+		B8CA387B16AEA576001D4C37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA387A16AEA576001D4C37 /* QuartzCore.framework */; };
+		B8D534D716AED22000E1BAEF /* JTLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D534D616AED22000E1BAEF /* JTLoadMoreCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +178,17 @@
 		B8CA378116AE6CF7001D4C37 /* EventEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventEntity.m; sourceTree = "<group>"; };
 		B8CA378316AE7A59001D4C37 /* JTJsonUltils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTJsonUltils.h; sourceTree = "<group>"; };
 		B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTJsonUltils.m; sourceTree = "<group>"; };
+		B8CA386C16AEA4EE001D4C37 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		B8CA386D16AEA4EE001D4C37 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		B8CA386E16AEA4EE001D4C37 /* blueArrow_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow_new.png; sourceTree = "<group>"; };
+		B8CA386F16AEA4EE001D4C37 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		B8CA387016AEA4EE001D4C37 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		B8CA387116AEA4EE001D4C37 /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
+		B8CA387216AEA4EE001D4C37 /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
+		B8CA387316AEA4EE001D4C37 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		B8CA387A16AEA576001D4C37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B8D534D516AED22000E1BAEF /* JTLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLoadMoreCell.h; sourceTree = "<group>"; };
+		B8D534D616AED22000E1BAEF /* JTLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLoadMoreCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA387B16AEA576001D4C37 /* QuartzCore.framework in Frameworks */,
 				B803DD3916AD4BD90020064C /* ImageIO.framework in Frameworks */,
 				B803DD3716AD4AD50020064C /* libz.dylib in Frameworks */,
 				B803DCB216AD49E20020064C /* MobileCoreServices.framework in Frameworks */,
@@ -212,6 +232,7 @@
 		B803DC6816AD48640020064C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8CA387A16AEA576001D4C37 /* QuartzCore.framework */,
 				B803DD3816AD4BD90020064C /* ImageIO.framework */,
 				B803DD3616AD4AD50020064C /* libz.dylib */,
 				B803DCB116AD49E20020064C /* MobileCoreServices.framework */,
@@ -259,6 +280,7 @@
 		B803DC8C16AD49310020064C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				B8CA386B16AEA4EE001D4C37 /* EGORefreshTableView */,
 				B803DD3A16AD4F250020064C /* SBJSON */,
 				B803DCB516AD4A500020064C /* ASIHTTP */,
 				B803DC8D16AD49310020064C /* SDWebImage */,
@@ -370,6 +392,8 @@
 				B803DD6516AD52810020064C /* JTPlaceCell.m */,
 				B8AC424F16AE2F8B00F88294 /* JTTimelineCell.h */,
 				B8AC425016AE2F8B00F88294 /* JTTimelineCell.m */,
+				B8D534D516AED22000E1BAEF /* JTLoadMoreCell.h */,
+				B8D534D616AED22000E1BAEF /* JTLoadMoreCell.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -412,6 +436,21 @@
 				B8CA378416AE7A59001D4C37 /* JTJsonUltils.m */,
 			);
 			path = Ultils;
+			sourceTree = "<group>";
+		};
+		B8CA386B16AEA4EE001D4C37 /* EGORefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA386C16AEA4EE001D4C37 /* blackArrow.png */,
+				B8CA386D16AEA4EE001D4C37 /* blueArrow.png */,
+				B8CA386E16AEA4EE001D4C37 /* blueArrow_new.png */,
+				B8CA386F16AEA4EE001D4C37 /* EGORefreshTableHeaderView.h */,
+				B8CA387016AEA4EE001D4C37 /* EGORefreshTableHeaderView.m */,
+				B8CA387116AEA4EE001D4C37 /* PullToRefreshTableViewController.h */,
+				B8CA387216AEA4EE001D4C37 /* PullToRefreshTableViewController.m */,
+				B8CA387316AEA4EE001D4C37 /* whiteArrow.png */,
+			);
+			path = EGORefreshTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +510,10 @@
 				B803DC7E16AD48640020064C /* Default@2x.png in Resources */,
 				B803DC8016AD48640020064C /* Default-568h@2x.png in Resources */,
 				B8AC428816AE402200F88294 /* noAvatar.png in Resources */,
+				B8CA387416AEA4EE001D4C37 /* blackArrow.png in Resources */,
+				B8CA387516AEA4EE001D4C37 /* blueArrow.png in Resources */,
+				B8CA387616AEA4EE001D4C37 /* blueArrow_new.png in Resources */,
+				B8CA387916AEA4EE001D4C37 /* whiteArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +566,9 @@
 				B8CA371E16AE516F001D4C37 /* PostingEntity.m in Sources */,
 				B8CA378216AE6CF7001D4C37 /* EventEntity.m in Sources */,
 				B8CA378516AE7A59001D4C37 /* JTJsonUltils.m in Sources */,
+				B8CA387716AEA4EE001D4C37 /* EGORefreshTableHeaderView.m in Sources */,
+				B8CA387816AEA4EE001D4C37 /* PullToRefreshTableViewController.m in Sources */,
+				B8D534D716AED22000E1BAEF /* JTLoadMoreCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +643,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -612,7 +658,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

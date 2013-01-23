@@ -31,22 +31,16 @@
 
 - (void)dealloc
 {
-    [super dealloc];
+    
     [self.postId release];
-    self.postId = nil;
     [self.postUrl release];
-    self.postUrl = nil;
     [self.postThumbUrl release];
-    self.postThumbUrl = nil;
     [self.timePost release];
-    self.timePost = nil;
     [self.description release];
-    self.description = nil;
     [self.username release];
-    self.username = nil;
     [self.userAvatarUrl release];
-    self.userAvatarUrl = nil;
     [self.placeName release];
-    self.placeName = nil;
+    
+    [super dealloc];
 }
 @end
