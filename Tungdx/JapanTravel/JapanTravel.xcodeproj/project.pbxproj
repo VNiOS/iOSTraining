@@ -55,6 +55,7 @@
 		B803DD6316AD51B20020064C /* JTImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6216AD51B20020064C /* JTImageView.m */; };
 		B803DD6616AD52810020064C /* JTPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6516AD52810020064C /* JTPlaceCell.m */; };
 		B884FC7216AD587400C917B3 /* PlaceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B884FC7116AD587400C917B3 /* PlaceEntity.m */; };
+		B890DE3D16AFDA970022D101 /* loadingImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = B890DE3C16AFDA970022D101 /* loadingImage.gif */; };
 		B8AC424D16AE2EC500F88294 /* JTTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */; };
 		B8AC425116AE2F8B00F88294 /* JTTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC425016AE2F8B00F88294 /* JTTimelineCell.m */; };
 		B8AC428816AE402200F88294 /* noAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8AC428716AE402200F88294 /* noAvatar.png */; };
@@ -69,6 +70,18 @@
 		B8CA387816AEA4EE001D4C37 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CA387216AEA4EE001D4C37 /* PullToRefreshTableViewController.m */; };
 		B8CA387916AEA4EE001D4C37 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CA387316AEA4EE001D4C37 /* whiteArrow.png */; };
 		B8CA387B16AEA576001D4C37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA387A16AEA576001D4C37 /* QuartzCore.framework */; };
+		B8D15E7716B0EC2D000F1F17 /* JTLoginFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D15E7616B0EC2D000F1F17 /* JTLoginFacebookViewController.m */; };
+		B8D15E8C16B10908000F1F17 /* silver-button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D15E8B16B10908000F1F17 /* silver-button-normal.png */; };
+		B8D15E9016B10B4A000F1F17 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D15E8F16B10B49000F1F17 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8D15E9216B10B51000F1F17 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D15E9116B10B51000F1F17 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8D160C116B10C0D000F1F17 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D160C016B10C0D000F1F17 /* FacebookSDK.framework */; };
+		B8D160CA16B10C3E000F1F17 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D160C916B10C3E000F1F17 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8D160CF16B10D8F000F1F17 /* JTBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D160CE16B10D8F000F1F17 /* JTBaseService.m */; };
+		B8D160D216B11023000F1F17 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D160D116B11023000F1F17 /* UserEntity.m */; };
+		B8D160D516B115E3000F1F17 /* JTLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D160D416B115E3000F1F17 /* JTLoginService.m */; };
+		B8D160D916B11FA5000F1F17 /* JTPostObjectEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D160D816B11FA5000F1F17 /* JTPostObjectEntity.m */; };
+		B8D160DD16B127FE000F1F17 /* JTJsonParseBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D160DC16B127FE000F1F17 /* JTJsonParseBase.m */; };
+		B8D3F0DB16B137B80028DC6F /* JTLoginJsonParse.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3F0DA16B137B80028DC6F /* JTLoginJsonParse.m */; };
 		B8D534D716AED22000E1BAEF /* JTLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D534D616AED22000E1BAEF /* JTLoadMoreCell.m */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +178,7 @@
 		B803DD6516AD52810020064C /* JTPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPlaceCell.m; sourceTree = "<group>"; };
 		B884FC7016AD587400C917B3 /* PlaceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceEntity.h; sourceTree = "<group>"; };
 		B884FC7116AD587400C917B3 /* PlaceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceEntity.m; sourceTree = "<group>"; };
+		B890DE3C16AFDA970022D101 /* loadingImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadingImage.gif; sourceTree = "<group>"; };
 		B8AC424B16AE2EC500F88294 /* JTTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTimeLineViewController.h; sourceTree = "<group>"; };
 		B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTimeLineViewController.m; sourceTree = "<group>"; };
 		B8AC424F16AE2F8B00F88294 /* JTTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTimelineCell.h; sourceTree = "<group>"; };
@@ -187,6 +201,27 @@
 		B8CA387216AEA4EE001D4C37 /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
 		B8CA387316AEA4EE001D4C37 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		B8CA387A16AEA576001D4C37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B8D15E7516B0EC2D000F1F17 /* JTLoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTLoginFacebookViewController.h; path = ../JTLoginFacebookViewController.h; sourceTree = "<group>"; };
+		B8D15E7616B0EC2D000F1F17 /* JTLoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTLoginFacebookViewController.m; path = ../JTLoginFacebookViewController.m; sourceTree = "<group>"; };
+		B8D15E8B16B10908000F1F17 /* silver-button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "silver-button-normal.png"; sourceTree = "<group>"; };
+		B8D15E8F16B10B49000F1F17 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B8D15E9116B10B51000F1F17 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B8D160C016B10C0D000F1F17 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = JapanTravel/Library/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B8D160C916B10C3E000F1F17 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B8D160CD16B10D8F000F1F17 /* JTBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseService.h; sourceTree = "<group>"; };
+		B8D160CE16B10D8F000F1F17 /* JTBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTBaseService.m; sourceTree = "<group>"; };
+		B8D160D016B11023000F1F17 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		B8D160D116B11023000F1F17 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		B8D160D316B115E3000F1F17 /* JTLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLoginService.h; sourceTree = "<group>"; };
+		B8D160D416B115E3000F1F17 /* JTLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLoginService.m; sourceTree = "<group>"; };
+		B8D160D616B11A28000F1F17 /* JTBaseServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBaseServiceDelegate.h; sourceTree = "<group>"; };
+		B8D160D716B11FA5000F1F17 /* JTPostObjectEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPostObjectEntity.h; sourceTree = "<group>"; };
+		B8D160D816B11FA5000F1F17 /* JTPostObjectEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPostObjectEntity.m; sourceTree = "<group>"; };
+		B8D160DB16B127FE000F1F17 /* JTJsonParseBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTJsonParseBase.h; sourceTree = "<group>"; };
+		B8D160DC16B127FE000F1F17 /* JTJsonParseBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTJsonParseBase.m; sourceTree = "<group>"; };
+		B8D3F0D916B137B80028DC6F /* JTLoginJsonParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLoginJsonParse.h; sourceTree = "<group>"; };
+		B8D3F0DA16B137B80028DC6F /* JTLoginJsonParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLoginJsonParse.m; sourceTree = "<group>"; };
+		B8D3F0DC16B141A50028DC6F /* JTJsonParseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTJsonParseDelegate.h; sourceTree = "<group>"; };
 		B8D534D516AED22000E1BAEF /* JTLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLoadMoreCell.h; sourceTree = "<group>"; };
 		B8D534D616AED22000E1BAEF /* JTLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLoadMoreCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +231,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D160CA16B10C3E000F1F17 /* Social.framework in Frameworks */,
+				B8D15E9216B10B51000F1F17 /* AdSupport.framework in Frameworks */,
+				B8D15E9016B10B4A000F1F17 /* Accounts.framework in Frameworks */,
 				B8CA387B16AEA576001D4C37 /* QuartzCore.framework in Frameworks */,
 				B803DD3916AD4BD90020064C /* ImageIO.framework in Frameworks */,
 				B803DD3716AD4AD50020064C /* libz.dylib in Frameworks */,
@@ -205,6 +243,7 @@
 				B803DC6A16AD48640020064C /* UIKit.framework in Frameworks */,
 				B803DC6C16AD48640020064C /* Foundation.framework in Frameworks */,
 				B803DC6E16AD48640020064C /* CoreGraphics.framework in Frameworks */,
+				B8D160C116B10C0D000F1F17 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +271,10 @@
 		B803DC6816AD48640020064C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8D160C916B10C3E000F1F17 /* Social.framework */,
+				B8D160C016B10C0D000F1F17 /* FacebookSDK.framework */,
+				B8D15E9116B10B51000F1F17 /* AdSupport.framework */,
+				B8D15E8F16B10B49000F1F17 /* Accounts.framework */,
 				B8CA387A16AEA576001D4C37 /* QuartzCore.framework */,
 				B803DD3816AD4BD90020064C /* ImageIO.framework */,
 				B803DD3616AD4AD50020064C /* libz.dylib */,
@@ -248,8 +291,9 @@
 		B803DC6F16AD48640020064C /* JapanTravel */ = {
 			isa = PBXGroup;
 			children = (
+				B8D160DA16B127EA000F1F17 /* JSONParse */,
+				B8D160CC16B10D7B000F1F17 /* API */,
 				B8CA371716AE45AA001D4C37 /* Ultils */,
-				B8AC428516AE402200F88294 /* Resources */,
 				B884FC6E16AD585500C917B3 /* entity */,
 				B803DD6016AD51960020064C /* CustomView */,
 				B803DC7816AD48640020064C /* JTAppDelegate.h */,
@@ -258,6 +302,9 @@
 				B803DC8216AD48640020064C /* JTViewController.m */,
 				B8AC424B16AE2EC500F88294 /* JTTimeLineViewController.h */,
 				B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */,
+				B8D15E7516B0EC2D000F1F17 /* JTLoginFacebookViewController.h */,
+				B8D15E7616B0EC2D000F1F17 /* JTLoginFacebookViewController.m */,
+				B8AC428516AE402200F88294 /* Resources */,
 				B803DC7016AD48640020064C /* Supporting Files */,
 			);
 			path = JapanTravel;
@@ -407,6 +454,10 @@
 				B8CA371D16AE516F001D4C37 /* PostingEntity.m */,
 				B8CA378016AE6CF7001D4C37 /* EventEntity.h */,
 				B8CA378116AE6CF7001D4C37 /* EventEntity.m */,
+				B8D160D016B11023000F1F17 /* UserEntity.h */,
+				B8D160D116B11023000F1F17 /* UserEntity.m */,
+				B8D160D716B11FA5000F1F17 /* JTPostObjectEntity.h */,
+				B8D160D816B11FA5000F1F17 /* JTPostObjectEntity.m */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -422,6 +473,8 @@
 		B8AC428616AE402200F88294 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B8D15E8B16B10908000F1F17 /* silver-button-normal.png */,
+				B890DE3C16AFDA970022D101 /* loadingImage.gif */,
 				B8AC428716AE402200F88294 /* noAvatar.png */,
 			);
 			path = Image;
@@ -451,6 +504,30 @@
 				B8CA387316AEA4EE001D4C37 /* whiteArrow.png */,
 			);
 			path = EGORefreshTableView;
+			sourceTree = "<group>";
+		};
+		B8D160CC16B10D7B000F1F17 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B8D160CD16B10D8F000F1F17 /* JTBaseService.h */,
+				B8D160CE16B10D8F000F1F17 /* JTBaseService.m */,
+				B8D160D616B11A28000F1F17 /* JTBaseServiceDelegate.h */,
+				B8D160D316B115E3000F1F17 /* JTLoginService.h */,
+				B8D160D416B115E3000F1F17 /* JTLoginService.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B8D160DA16B127EA000F1F17 /* JSONParse */ = {
+			isa = PBXGroup;
+			children = (
+				B8D160DB16B127FE000F1F17 /* JTJsonParseBase.h */,
+				B8D160DC16B127FE000F1F17 /* JTJsonParseBase.m */,
+				B8D3F0D916B137B80028DC6F /* JTLoginJsonParse.h */,
+				B8D3F0DA16B137B80028DC6F /* JTLoginJsonParse.m */,
+				B8D3F0DC16B141A50028DC6F /* JTJsonParseDelegate.h */,
+			);
+			path = JSONParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +566,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = B803DC5A16AD48640020064C;
 			productRefGroup = B803DC6616AD48640020064C /* Products */;
@@ -514,6 +592,8 @@
 				B8CA387516AEA4EE001D4C37 /* blueArrow.png in Resources */,
 				B8CA387616AEA4EE001D4C37 /* blueArrow_new.png in Resources */,
 				B8CA387916AEA4EE001D4C37 /* whiteArrow.png in Resources */,
+				B890DE3D16AFDA970022D101 /* loadingImage.gif in Resources */,
+				B8D15E8C16B10908000F1F17 /* silver-button-normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +649,13 @@
 				B8CA387716AEA4EE001D4C37 /* EGORefreshTableHeaderView.m in Sources */,
 				B8CA387816AEA4EE001D4C37 /* PullToRefreshTableViewController.m in Sources */,
 				B8D534D716AED22000E1BAEF /* JTLoadMoreCell.m in Sources */,
+				B8D15E7716B0EC2D000F1F17 /* JTLoginFacebookViewController.m in Sources */,
+				B8D160CF16B10D8F000F1F17 /* JTBaseService.m in Sources */,
+				B8D160D216B11023000F1F17 /* UserEntity.m in Sources */,
+				B8D160D516B115E3000F1F17 /* JTLoginService.m in Sources */,
+				B8D160D916B11FA5000F1F17 /* JTPostObjectEntity.m in Sources */,
+				B8D160DD16B127FE000F1F17 /* JTJsonParseBase.m in Sources */,
+				B8D3F0DB16B137B80028DC6F /* JTLoginJsonParse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +694,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -626,7 +713,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -636,11 +723,18 @@
 		B803DC8A16AD48640020064C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/JapanTravel/Library/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JapanTravel/JapanTravel-Prefix.pch";
 				INFOPLIST_FILE = "JapanTravel/JapanTravel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
@@ -651,11 +745,18 @@
 		B803DC8B16AD48640020064C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/JapanTravel/Library/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JapanTravel/JapanTravel-Prefix.pch";
 				INFOPLIST_FILE = "JapanTravel/JapanTravel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";

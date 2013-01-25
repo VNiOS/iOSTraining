@@ -22,9 +22,6 @@
         self.imageUrl = [dict objectForKey:@"image"];
         self.startTime = [dict objectForKey:@"start_at"];
         self.endTime = [dict objectForKey:@"end_at"];
-
-        NSDate *date = [JTCommonUltils convertStringToDate:self.startTime];
-        NSLog(@"%@",date);
     }
     return self;
 }

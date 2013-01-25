@@ -10,12 +10,12 @@
 #import "SBJson.h"
 
 @implementation JTJsonUltils
-@synthesize paser=_paser, adapter=_adapter;
+@synthesize paser=_paser, adapter=_adapter,tag=_tag;
 
 
 - (id)initWithDelegate:(id<SBJsonStreamParserAdapterDelegate>)delegate
 {
-    [super init];
+    self =  [super init];
     if(self)
     {
         self.adapter = [[SBJsonStreamParserAdapter alloc] init];

@@ -49,17 +49,14 @@
     [super viewDidLoad];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    offset = 0;
+    offset = 1;
     [self requestTimeline];
 	// Do any additional setup after loading the view.
 }
 
 - (void)requestTimeline
 {
-    if(offset<1)
-        offset = 1;
     NSString *urlString = [NSString stringWithFormat:@"%@%d",@"http://api.japantravel.icapps.co/timeline?limit=20&offset=",offset];
-    NSLog(@"url: %@",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     if(requestTimeline && ![requestTimeline complete])
     {
@@ -76,7 +73,6 @@
 
 - (void)getTimeLineFinished:(ASIHTTPRequest *)request
 {
-    NSLog(@"finished");
     JTJsonUltils *json = [[JTJsonUltils alloc] initWithDelegate:self];
     [json parseJson:[request responseData]];
 }
@@ -125,12 +121,11 @@
 
 - (void)parser:(SBJsonStreamParser *)parser foundArray:(NSArray *)array
 {
-    NSLog(@"array");
+
 }
 
 - (void)getTimelineFailed:(ASIHTTPRequest *)request
 {
-    NSLog(@"failed");
     if(self.reloading)
         [self dataSourceDidFinishLoadingNewData];
 }

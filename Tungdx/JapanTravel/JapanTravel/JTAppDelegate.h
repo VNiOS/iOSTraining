@@ -10,6 +10,7 @@
 
 @class JTViewController;
 @class JTTimeLineViewController;
+@class JTLoginFacebookViewController;
 
 @interface JTAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,4 +19,6 @@
 @property (strong, nonatomic) JTViewController *viewController;
 
 @property (strong, nonatomic) JTTimeLineViewController *timelineController;
+
+@property (strong, nonatomic) JTLoginFacebookViewController *loginController;
 @end
