@@ -48,22 +48,11 @@
 
 - (void)getListPlaceFinished:(ASIHTTPRequest *)request
 {
-    
-    SBJsonStreamParserStatus status = [paser parse:request.responseData];
-    if(status == SBJsonStreamParserError)
-    {
-        NSLog(@"parser error");
-    }
-    else if(status == SBJsonStreamParserWaitingForData)
-    {
-        NSLog(@"parser success");
-    }
+    [paser parse:request.responseData];
 }
 
 - (void)parser:(SBJsonStreamParser *)parser foundObject:(NSDictionary *)dict
 {
-    NSLog(@"finish: %@",dict);
-    
     NSMutableArray *places = [[dict objectForKey:@"data"] objectForKey:@"places"];
     if(!self.listPlace)
         self.listPlace = [[NSMutableArray alloc] init];

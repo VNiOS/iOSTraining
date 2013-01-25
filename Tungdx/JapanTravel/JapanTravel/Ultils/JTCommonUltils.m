@@ -64,18 +64,13 @@
 + (NSDate *)convertStringToDate:(NSString *)string
 {
     NSDateFormatter *dateFormat = [[[NSDateFormatter alloc]init] autorelease];
-//    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-//    [dateFormat setTimeZone:gmt];
     [dateFormat setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
-    NSLog(@"%@",[dateFormat dateFromString:string]);
     return [dateFormat dateFromString:string];
 }
 
 + (NSString *)convertDateToString:(NSDate *)date
 {
     NSDateFormatter *dateFormat = [[[NSDateFormatter alloc]init] autorelease];
-//    NSTimeZone *gmt = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-//    [dateFormat setTimeZone:gmt];
     [dateFormat setDateFormat:@"yyyy/MM/dd"];
     return [dateFormat stringFromDate:date];
 }

@@ -17,6 +17,7 @@
 
 @property (nonatomic, retain) SBJsonStreamParser *paser;
 @property (nonatomic, retain) SBJsonStreamParserAdapter *adapter;
+@property (assign) NSInteger tag;
 
 - (void)parseJson:(NSData *)data;
 - (id)initWithDelegate:(id <SBJsonStreamParserAdapterDelegate> )delegate;

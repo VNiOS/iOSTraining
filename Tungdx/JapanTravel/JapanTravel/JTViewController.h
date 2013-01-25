@@ -18,6 +18,7 @@
     SBJsonStreamParser *paser;
     SBJsonStreamParserAdapter *adapter;
 }
+
 @property (nonatomic, retain) UITableView *tableview;
 @property (nonatomic, retain) NSMutableArray *listPlace;
 @end

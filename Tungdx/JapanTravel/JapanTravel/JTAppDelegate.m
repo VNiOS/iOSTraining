@@ -10,6 +10,8 @@
 
 #import "JTViewController.h"
 #import "JTTimeLineViewController.h"
+#import "JTLoginFacebookViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 @implementation JTAppDelegate
 
 - (void)dealloc
@@ -17,6 +19,7 @@
     [_window release];
     [_viewController release];
     [_timelineController release];
+    [_loginController release];
     [super dealloc];
 }
 
@@ -28,9 +31,12 @@
 //    self.viewController = [[JTViewController alloc] init];
 //    [self.viewController.view setFrame:CGRectMake(0, 0, 320, 460)];
     
-    self.timelineController = [[JTTimeLineViewController alloc] initWithStyle:UITableViewStylePlain];
-    
-    self.window.rootViewController = self.timelineController;
+//    self.timelineController = [[JTTimeLineViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.loginController = [[JTLoginFacebookViewController alloc] init];
+    [self.loginController.view setFrame:CGRectMake(0, 0, 320, 460)];
+    [self.loginController.view setBackgroundColor:[UIColor whiteColor]];
+    self.window.rootViewController = self.loginController;
+    NSLog(@"%f %f",self.loginController.view.frame.size.width,self.loginController.view.frame.size.height);
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -55,11 +61,17 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    return [FBSession.activeSession handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [FBSession.activeSession close];
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [FBSession.activeSession handleOpenURL:url];
+}
 @end

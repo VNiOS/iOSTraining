@@ -24,7 +24,7 @@
 {
 //    [self setImageWithURL:url forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"noAvatar.png"]];
 //    [self setImageWithURL:url placeholderImage:[UIImage imageNamed:@"noAvatar.png"]];
-    [self setImageWithURL:url placeholderImage:[UIImage imageNamed:@"noAvatar.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+    [self setImageWithURL:url placeholderImage:[UIImage imageNamed:@"loadingImage.gif"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
         
         CGImageRef imageRef;
         if(image.size.height>image.size.width)
