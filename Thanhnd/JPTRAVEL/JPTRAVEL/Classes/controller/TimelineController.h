@@ -8,7 +8,7 @@
 
 #import "BaseTableViewController.h"
 
-@interface TimelineController : BaseTableViewController
+@interface TimelineController : BaseTableViewController<UITableViewDataSource>
 {
     
 }
