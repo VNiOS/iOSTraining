@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseResponseEntity.h"
 
 @protocol JTJsonParseDelegate <NSObject>
 @optional
-- (void)parseDataSuccess:(NSObject *)object withTag:(int)tag error:(NSError *)error;
+- (void)parseDataSuccess:(NSObject *)object withTag:(int)tag error:(BaseResponseEntity *)error;
 @end

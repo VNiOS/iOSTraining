@@ -36,7 +36,7 @@
     [self.loginController.view setFrame:CGRectMake(0, 0, 320, 460)];
     [self.loginController.view setBackgroundColor:[UIColor whiteColor]];
     self.window.rootViewController = self.loginController;
-    NSLog(@"%f %f",self.loginController.view.frame.size.width,self.loginController.view.frame.size.height);
+
     [self.window makeKeyAndVisible];
     return YES;
 }

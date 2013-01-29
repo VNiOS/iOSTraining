@@ -10,6 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "JTBaseServiceDelegate.h"
+#import "BaseResponseEntity.h"
 
 #define SERVER_ADDRESS @"http://api.japantravel.icapps.co"
 
@@ -26,6 +27,6 @@
 @property (nonatomic, retain) ASIFormDataRequest *postDataRequest;
 
 
-- (void)getDataRequest:(NSURL *)url withMethod:(NSString *)method andTag:(NSInteger )tag;
+- (void)getDataRequest:(NSURL *)url andTag:(NSInteger )tag;
 - (void)postFormDataRequest:(NSURL *)url withArray:(NSArray *)list andTag:(NSInteger )tag;
 @end

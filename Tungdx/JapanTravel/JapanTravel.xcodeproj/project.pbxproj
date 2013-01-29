@@ -54,6 +54,11 @@
 		B803DD5F16AD4F250020064C /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD5316AD4F250020064C /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B803DD6316AD51B20020064C /* JTImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6216AD51B20020064C /* JTImageView.m */; };
 		B803DD6616AD52810020064C /* JTPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B803DD6516AD52810020064C /* JTPlaceCell.m */; };
+		B83A994116B2344E0073B45D /* JTFacebookConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A993516B233140073B45D /* JTFacebookConnection.m */; };
+		B83A994216B2344E0073B45D /* JTFacebookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A993816B233140073B45D /* JTFacebookEntity.m */; };
+		B83A994316B234600073B45D /* JTSocialNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A993A16B233140073B45D /* JTSocialNetworkConnection.m */; };
+		B83A994416B234600073B45D /* JTSocialNetworkEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A993C16B233140073B45D /* JTSocialNetworkEntity.m */; };
+		B83A995B16B247F90073B45D /* BaseResponseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A995A16B247F90073B45D /* BaseResponseEntity.m */; };
 		B884FC7216AD587400C917B3 /* PlaceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B884FC7116AD587400C917B3 /* PlaceEntity.m */; };
 		B890DE3D16AFDA970022D101 /* loadingImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = B890DE3C16AFDA970022D101 /* loadingImage.gif */; };
 		B8AC424D16AE2EC500F88294 /* JTTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC424C16AE2EC500F88294 /* JTTimeLineViewController.m */; };
@@ -176,6 +181,17 @@
 		B803DD6216AD51B20020064C /* JTImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTImageView.m; sourceTree = "<group>"; };
 		B803DD6416AD52810020064C /* JTPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPlaceCell.h; sourceTree = "<group>"; };
 		B803DD6516AD52810020064C /* JTPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPlaceCell.m; sourceTree = "<group>"; };
+		B83A993416B233140073B45D /* JTFacebookConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTFacebookConnection.h; sourceTree = "<group>"; };
+		B83A993516B233140073B45D /* JTFacebookConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTFacebookConnection.m; sourceTree = "<group>"; };
+		B83A993616B233140073B45D /* JTFacebookDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTFacebookDelegate.h; sourceTree = "<group>"; };
+		B83A993716B233140073B45D /* JTFacebookEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTFacebookEntity.h; sourceTree = "<group>"; };
+		B83A993816B233140073B45D /* JTFacebookEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTFacebookEntity.m; sourceTree = "<group>"; };
+		B83A993916B233140073B45D /* JTSocialNetworkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSocialNetworkConnection.h; sourceTree = "<group>"; };
+		B83A993A16B233140073B45D /* JTSocialNetworkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSocialNetworkConnection.m; sourceTree = "<group>"; };
+		B83A993B16B233140073B45D /* JTSocialNetworkEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSocialNetworkEntity.h; sourceTree = "<group>"; };
+		B83A993C16B233140073B45D /* JTSocialNetworkEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSocialNetworkEntity.m; sourceTree = "<group>"; };
+		B83A995916B247F90073B45D /* BaseResponseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseResponseEntity.h; sourceTree = "<group>"; };
+		B83A995A16B247F90073B45D /* BaseResponseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseResponseEntity.m; sourceTree = "<group>"; };
 		B884FC7016AD587400C917B3 /* PlaceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceEntity.h; sourceTree = "<group>"; };
 		B884FC7116AD587400C917B3 /* PlaceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceEntity.m; sourceTree = "<group>"; };
 		B890DE3C16AFDA970022D101 /* loadingImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadingImage.gif; sourceTree = "<group>"; };
@@ -291,6 +307,7 @@
 		B803DC6F16AD48640020064C /* JapanTravel */ = {
 			isa = PBXGroup;
 			children = (
+				B83A993316B233140073B45D /* SocialNetworks */,
 				B8D160DA16B127EA000F1F17 /* JSONParse */,
 				B8D160CC16B10D7B000F1F17 /* API */,
 				B8CA371716AE45AA001D4C37 /* Ultils */,
@@ -445,6 +462,22 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		B83A993316B233140073B45D /* SocialNetworks */ = {
+			isa = PBXGroup;
+			children = (
+				B83A993416B233140073B45D /* JTFacebookConnection.h */,
+				B83A993516B233140073B45D /* JTFacebookConnection.m */,
+				B83A993616B233140073B45D /* JTFacebookDelegate.h */,
+				B83A993716B233140073B45D /* JTFacebookEntity.h */,
+				B83A993816B233140073B45D /* JTFacebookEntity.m */,
+				B83A993916B233140073B45D /* JTSocialNetworkConnection.h */,
+				B83A993A16B233140073B45D /* JTSocialNetworkConnection.m */,
+				B83A993B16B233140073B45D /* JTSocialNetworkEntity.h */,
+				B83A993C16B233140073B45D /* JTSocialNetworkEntity.m */,
+			);
+			path = SocialNetworks;
+			sourceTree = "<group>";
+		};
 		B884FC6E16AD585500C917B3 /* entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +491,8 @@
 				B8D160D116B11023000F1F17 /* UserEntity.m */,
 				B8D160D716B11FA5000F1F17 /* JTPostObjectEntity.h */,
 				B8D160D816B11FA5000F1F17 /* JTPostObjectEntity.m */,
+				B83A995916B247F90073B45D /* BaseResponseEntity.h */,
+				B83A995A16B247F90073B45D /* BaseResponseEntity.m */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -604,6 +639,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83A994316B234600073B45D /* JTSocialNetworkConnection.m in Sources */,
+				B83A994416B234600073B45D /* JTSocialNetworkEntity.m in Sources */,
+				B83A994116B2344E0073B45D /* JTFacebookConnection.m in Sources */,
+				B83A994216B2344E0073B45D /* JTFacebookEntity.m in Sources */,
 				B803DC7616AD48640020064C /* main.m in Sources */,
 				B803DC7A16AD48640020064C /* JTAppDelegate.m in Sources */,
 				B803DC8316AD48640020064C /* JTViewController.m in Sources */,
@@ -656,6 +695,7 @@
 				B8D160D916B11FA5000F1F17 /* JTPostObjectEntity.m in Sources */,
 				B8D160DD16B127FE000F1F17 /* JTJsonParseBase.m in Sources */,
 				B8D3F0DB16B137B80028DC6F /* JTLoginJsonParse.m in Sources */,
+				B83A995B16B247F90073B45D /* BaseResponseEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

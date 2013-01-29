@@ -10,4 +10,5 @@
 
 @interface BaseResponseEntity : NSObject
 
+@property (nonatomic, retain) NSString *message;
 @end

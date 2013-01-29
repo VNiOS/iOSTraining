@@ -11,7 +11,7 @@
 @implementation JTSocialNetworkEntity
 @synthesize sid=_sid, accessToken=_accessToken;
 
-- (id)initwithDictionary:(NSDictionary *)dic
+- (id)initWithDictionary:(NSDictionary *)dic
 {
     self = [super init];
     if(self)

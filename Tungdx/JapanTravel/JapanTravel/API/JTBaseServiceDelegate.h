@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseResponseEntity.h"
 
 @class ASIHTTPRequest;
 
@@ -15,5 +16,5 @@
 - (void)requestServiceFinished:(ASIHTTPRequest *)request;
 - (void)requestServiceFailed:(ASIHTTPRequest *)request;
 
-- (void)responseDataSuccessFromService:(NSObject *)object error:(NSError *)error;
+- (void)responseDataSuccessFromService:(NSObject *)object error:(BaseResponseEntity *)error;
 @end

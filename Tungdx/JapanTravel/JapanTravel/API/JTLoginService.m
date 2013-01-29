@@ -68,7 +68,7 @@
     
 }
 
-- (void)parseDataSuccess:(NSObject *)object withTag:(int)tag error:(NSError *)error
+- (void)parseDataSuccess:(NSObject *)object withTag:(int)tag error:(BaseResponseEntity *)error
 {
     if(tag == LOGIN_API_TAG)
     {

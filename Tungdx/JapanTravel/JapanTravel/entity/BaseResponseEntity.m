@@ -9,5 +9,12 @@
 #import "BaseResponseEntity.h"
 
 @implementation BaseResponseEntity
+@synthesize message=_message;
 
+
+- (void)dealloc
+{
+    [self.message release];
+    [super dealloc];
+}
 @end

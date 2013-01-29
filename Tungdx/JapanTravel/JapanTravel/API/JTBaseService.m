@@ -12,10 +12,10 @@
 @implementation JTBaseService
 @synthesize getDataRequest=_getDataRequest, postDataRequest=_postDataRequest,delegate=_delegate;
 
-- (void)getDataRequest:(NSURL *)url withMethod:(NSString *)method andTag:(NSInteger )tag
+- (void)getDataRequest:(NSURL *)url andTag:(NSInteger )tag
 {
     self.getDataRequest = [[ASIHTTPRequest alloc] initWithURL:url];
-    [self.getDataRequest setRequestMethod:method];
+    [self.getDataRequest setRequestMethod:@"GET"];
     [self.getDataRequest setTag:tag];
     [self.getDataRequest setDelegate:baseSirvicedelegate];
     [self.getDataRequest startAsynchronous];

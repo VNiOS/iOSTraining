@@ -23,7 +23,7 @@
         self.avatar = [dic objectForKey:@"avatar"];
         self.deleted = [[dic objectForKey:@"deleted"] boolValue];
         self.createdAt = [dic objectForKey:@"created_at"];
-        self.updateAt = [dic objectForKey:@"update_at"];
+        self.updateAt = [dic objectForKey:@"updated_at"];
     }
     return self;
 }

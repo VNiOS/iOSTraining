@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JTSocialNetworkConnection.m"
+#import "JTSocialNetworkConnection.h"
 #import "JTFacebookDelegate.h"
+#import "JTJsonParseBase.h"
+
 
 @interface JTFacebookConnection : NSObject
 {

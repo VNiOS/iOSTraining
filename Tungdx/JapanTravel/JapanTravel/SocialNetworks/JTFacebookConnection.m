@@ -8,7 +8,7 @@
 
 #import "JTFacebookConnection.h"
 #import <FacebookSDK/FacebookSDK.h>
-
+#import "JTFacebookEntity.h"
 @implementation JTFacebookConnection
 @synthesize delegate=_delegate;
 
@@ -27,6 +27,7 @@
     switch (state) {
         case FBSessionStateOpen:
             NSLog(@"state open");
+            [self getInfomation];
             break;
         case FBSessionStateClosed:
             NSLog(@"state closed");
@@ -37,7 +38,7 @@
         default:
             break;
     }
-    [self getInfomation];
+    
 }
 
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowUI
@@ -57,15 +58,26 @@
 {
     if([FBSession.activeSession isOpen])
     {
-        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-            NSLog(@"%@",result);
-            if(!error)
-            {
-                JTFacebookEntity *fbEntity = [[JTFacebookEntity alloc] initwithDictionary:[result objectForKey:@"data"]];
-                if(self.delegate)
-                    [self.delegate loginFacebookSuccess:fbEntity];
-            }
+        NSString *fql = @"SELECT uid, name, pic_square FROM user where uid = me()";
+        NSDictionary *query = [NSDictionary dictionaryWithObjectsAndKeys:fql, @"q", nil];
+        [FBRequestConnection startWithGraphPath:@"/fql" parameters:query HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            
+                if(!error)
+                {
+                    NSArray *dicResult = (NSArray *)[result objectForKey:@"data"] ;
+                    NSLog(@"%@",dicResult);
+                    FBGraphObject *object = [dicResult objectAtIndex:0];
+                    NSMutableDictionary *fbDictionary = [[NSMutableDictionary alloc] init];
+                    [fbDictionary setValue:[object objectForKey:@"pic_square"] forKey:@"avatar"];
+                    [fbDictionary setValue:[[FBSession activeSession] accessToken] forKey:@"accessToken"];
+                    [fbDictionary setValue:[object objectForKey:@"name"] forKey:@"name"];
+                    [fbDictionary setValue:[object objectForKey:@"uid"] forKey:@"sid"];
+                    JTFacebookEntity *fbEntity = [[JTFacebookEntity alloc] initWithDictionary:fbDictionary];
+                    if(self.delegate)
+                        [self.delegate loginFacebookSuccess:fbEntity];
+                }
         }];
     }
 }
+
 @end

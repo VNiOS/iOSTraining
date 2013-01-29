@@ -33,51 +33,51 @@
 - (void)parser:(SBJsonStreamParser *)parser foundObject:(NSDictionary *)dict
 {
     NSString *success = [dict objectForKey:@"status"];
+    if([success isEqualToString:@"error"])
+    {
+        BaseResponseEntity *error = [[BaseResponseEntity alloc]init];
+        error.message = [dict objectForKey:@"message"];
+        
+        if(self.delegate)
+            [self.delegate parseDataSuccess:nil withTag:LOGIN_API_TAG error:error];
+    }
+    else
+    {
+        if(self.tag == LOGIN_API_TAG)
+            [self parserLoginAPI:dict];
+    }
+}
+
+- (void)parserLoginAPI:(NSDictionary *)dict
+{
+    NSString *success = [dict objectForKey:@"status"];
     if([success isEqualToString:@"success"])
     {
         NSDictionary *dic = [dict objectForKey:@"data"];
         if(![dic isKindOfClass:[NSNull class]])
         {
-            if(self.tag== LOGIN_API_TAG)
+            UserEntity *entity = [[UserEntity alloc] initwithDictionary:[dic objectForKey:@"user"]];
+            if(entity)
             {
-                UserEntity *entity = [[UserEntity alloc] initwithDictionary:[dic objectForKey:@"user"]];
-                if(entity)
-                {
-                    if(self.delegate)
-                        [self.delegate parseDataSuccess:entity withTag:LOGIN_API_TAG error:nil];
-                }
-                else
-                {
-                    NSError *error = [[NSError alloc] init];
-                    [error setValue:dic forKey:@"error"];
-                    if(self.delegate)
-                        [self.delegate parseDataSuccess:entity withTag:LOGIN_API_TAG error:error];
-                }
-            }
-        }
-        else
-        {
-
-        }
-    }
-    else // status: error
-    {
-        if(self.tag== LOGIN_API_TAG)
-        {
-            if(self.delegate)
-            {
-                NSError *error = [[NSError alloc] init];
-                [error setValue:[dict objectForKey:@"message"] forKey:@"error"];
                 if(self.delegate)
-                    [self.delegate parseDataSuccess:nil withTag:LOGIN_API_TAG error:error];
+                    [self.delegate parseDataSuccess:entity withTag:LOGIN_API_TAG error:nil];
             }
         }
     }
-}
-
-- (void)parserLoginAPI:(NSDictionary *)dic
-{
-    
+    else if([success isEqualToString:@"fail"])
+    {
+        BaseResponseEntity *error = [[BaseResponseEntity alloc]init];
+        error.message = @"";
+        if ([[dict objectForKey:@"data"] objectForKey:@"facebook_id"]) {
+            error.message = @"facebook_id can't be blank";
+        }
+        if([[dict objectForKey:@"data"] objectForKey:@"facebook_id"])
+        {
+            error.message = [NSString stringWithFormat:@"%@, %@",error.message,@"name can't be blank"];
+        }
+        if(self.delegate)
+            [self.delegate parseDataSuccess:nil withTag:LOGIN_API_TAG error:error];
+    }
 }
 
 @end

@@ -12,7 +12,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dic
 {
-    self = [super initwithDictionary:dic];
+    self = [super initWithDictionary:dic];
     if(self)
     {
         self.name = [dic objectForKey:@"name"];

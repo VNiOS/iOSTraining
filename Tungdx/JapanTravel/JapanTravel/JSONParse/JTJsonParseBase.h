@@ -21,4 +21,5 @@
 
 - (void)parseJsonData:(NSData *)data;
 - (id)initWithDelegate:(id<SBJsonStreamParserAdapterDelegate>)delegate;
+
 @end

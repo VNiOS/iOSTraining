@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "JTSocialNetworkEntity.h"
+#import "JTJsonParseDelegate.h"
 
-@interface JTFacebookEntity : JTSocialNetworkEntity
+@interface JTFacebookEntity : JTSocialNetworkEntity <JTJsonParseDelegate>
 {
 
 }
 @property (nonatomic ,retain) NSString *name;
 @property (nonatomic, retain) NSString *avatar;
+
+
+- (id)initWithDictionary:(NSDictionary *)dic;
 @end

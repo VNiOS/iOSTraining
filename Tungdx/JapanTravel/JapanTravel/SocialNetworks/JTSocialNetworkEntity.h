@@ -13,5 +13,5 @@
 @property (nonatomic, retain) NSString *accessToken;
 @property (nonatomic, retain) NSString *sid;
 
-- (id)initwithDictionary:(NSDictionary *)dic;
+- (id)initWithDictionary:(NSDictionary *)dic;
 @end
