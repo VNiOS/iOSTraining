@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ViewController.h"
+#import "BaseViewController.h"
 
 @interface DataLoader : NSObject
 

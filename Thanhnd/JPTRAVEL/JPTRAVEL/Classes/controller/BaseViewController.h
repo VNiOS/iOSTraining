@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CKRefreshControl/CKRefreshControl.h"
+#import "BaseApiService.h"
 @interface BaseViewController : UIViewController
--(void) doRefresh:(CKRefreshControl *)sender;
+@property (nonatomic, retain) BaseApiService *baseApiService;
+
+-(void) didFinishSelector:(BaseApiService *) response;
+-(void) didFailSelector:(BaseApiService *) response;
 @end

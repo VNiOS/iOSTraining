@@ -14,19 +14,14 @@
 #import "JsonParser.h"
 #import "PlaceEntity.h"
 #import <UIImageView+WebCache.h>
-
+#import "PlaceService.h"
 @interface ListPlaceController (){
-    ASIHTTPRequest *requestData;
-    SBJsonStreamParserAdapter *jsonAdapter;
-    SBJsonStreamParser *parser;
-    NSMutableArray *lstPlaces;
+    NSMutableArray *lstPlaces;//Declar listPlaces
+    PlaceService *placeService;//Declar Service
 }
 
 @end
 
-@interface ListPlaceController (SBJsonStreamParserAdapterDelegate) <SBJsonStreamParserAdapterDelegate>
-
-@end
 
 @implementation ListPlaceController
 @synthesize tableViewPlaces;
@@ -43,81 +38,31 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    jsonAdapter = [[SBJsonStreamParserAdapter alloc] init];
+    //Initiation service
+    placeService = [[PlaceService alloc]init];
     
-    jsonAdapter.delegate = self;
+    //assigin Delegate
+    placeService.delegate = self;
     
-    parser = [[SBJsonStreamParser alloc] init];
+    //Call method get data in service
+    [placeService getListPlace:@"1" withOffset:1];
     
-    parser.delegate = jsonAdapter;
-
-    parser.supportMultipleDocuments = YES;
+    //Assign method for selector when received data
+    [placeService setDidFinishSelector:@selector(didFinishSelector:)];
     
-    requestData = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.japantravel.icapps.co/places?area_id=1&limit=20&offset=1"]];
-    requestData.delegate = self;
-    [requestData setDidFinishSelector:@selector(didFinishSelector:)];
-    [requestData startAsynchronous];
-    
-}
-- (void) didFinishSelector:(ASIHTTPRequest *) respones
-{
-    NSData* data = [respones responseData];
-    [parser parse:data];
-    
+    //Assign method for selector when not received data
+    [placeService setDidFailedSelector:@selector(didFailSelector:)];
 }
 
--(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(void)didFinishSelector:(BaseApiService *)response
 {
-    if(lstPlaces) return [lstPlaces count];
-    return 0;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *keyTableId = @"placeItem";
-    UITableViewCell *cell = [tableViewPlaces dequeueReusableCellWithIdentifier:keyTableId];
-    
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:keyTableId] autorelease];
-    }
-    PlaceEntity *place = [lstPlaces objectAtIndex:indexPath.row];
-    cell.textLabel.text = place.name;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:place.urlImage] placeholderImage:[UIImage imageNamed:@"icon.png"]];
-    return cell;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void) dealloc
-{
-    [lstPlaces release];
-    [requestData release];
-    [jsonAdapter release];
-    [parser release];
-    [super dealloc];
-}
-
-@end
-
-@implementation ListPlaceController (SBJsonStreamParserAdapterDelegate)
-
-- (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray*)array
-{
-    NSLog(@"Dict: %@",array);
-}
-
-- (void)parser:(SBJsonStreamParser*)parser foundObject:(NSDictionary*)dict
-{
-    JsonParser *jsParser = [[JsonParser alloc] init];
-    lstPlaces = [[jsParser getListPlace:dict] retain];
+    lstPlaces = response.arrayData;
     [tableViewPlaces reloadData];
-    NSLog(@"Dict: %@",dict);
 }
+-(void)didFailSelector:(BaseApiService *)response
+{
 
+}
 @end

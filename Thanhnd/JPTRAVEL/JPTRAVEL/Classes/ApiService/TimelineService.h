@@ -8,6 +8,8 @@
 
 #import "BaseApiService.h"
 
-@interface TimelineService : BaseApiService
+FOUNDATION_EXPORT NSString * const SVTimeline;
 
+@interface TimelineService : BaseApiService
+-(void) getListTimeline:(int)offset;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BaseApiService.h"
-
+FOUNDATION_EXPORT NSString * const SVPlace;
 @interface PlaceService : BaseApiService
-
+-(void) getListPlace:(NSString *) areaId withOffset:(NSInteger) offset;
 @end

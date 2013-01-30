@@ -7,35 +7,24 @@
 //
 
 #import "TimelineController.h"
-#import "ASIHTTPRequest.h"
-#import <SBJson/SBJson.h>
-#import <SBJson/SBJsonStreamParserAdapter.h>
-#import <SBJson/SBJsonStreamParser.h>
-#import "JsonParser.h"
-#import <UIImageView+WebCache.h>
 #import "PostCell.h"
 #import "TimelineEntity.h"
 #import "EventCustomCell.h"
 #import <CKRefreshControl/CKRefreshControl.h>
+#import "TimelineService.h"
 
 @interface TimelineController (){
-    ASIHTTPRequest *requestData;
-    SBJsonStreamParserAdapter *jsonAdapter;
-    SBJsonStreamParser *parser;
-    NSMutableArray *lstTimeline;
+    NSMutableArray *listTimeline;
 }
-
 @end
 
-@interface TimelineController (SBJsonStreamParserAdapterDelegate) <SBJsonStreamParserAdapterDelegate>
-
-@end
 @interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
 
 @end
+
 @implementation TimelineController
 @synthesize tableViewTimeline;
-
+@synthesize timelineService;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,33 +38,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    #pragma mark - JSON init
-    jsonAdapter = [[SBJsonStreamParserAdapter alloc] init];
-    jsonAdapter.delegate = self;
-    parser = [[SBJsonStreamParser alloc] init];
-    parser.delegate = jsonAdapter;
-    parser.supportMultipleDocuments = YES;
+    #pragma init tableview
+    tableViewTimeline = [[[UITableView alloc] initWithFrame:CGRectMake(0, 20, 320, 460) style:UITableViewStylePlain] autorelease];
+    tableViewTimeline.dataSource = self;
+    tableViewTimeline.delegate = self;
+    [self.view addSubview:tableViewTimeline];
     
     #pragma mark - Pull to refresh init
     CKRefreshControl *refreshControl = [CKRefreshControl new];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"AloAlo"];
     [refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = (id)refreshControl;
+    [tableViewTimeline addSubview:refreshControl];
     
-    #pragma mark - Request init
-    requestData = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.japantravel.icapps.co/timeline?limit=20&offset=1"]];
-    requestData.delegate = self;
-    [requestData setDidFinishSelector:@selector(didFinishSelector:)];
-    [requestData startAsynchronous];
-
+    timelineService = [[TimelineService alloc] init];
+    timelineService.delegate = self;
+    [timelineService getListTimeline:1];
+    [timelineService setDidFinishSelector:@selector(didFinishSelector:)];
 }
 
-- (void) didFinishSelector:(ASIHTTPRequest *) respones
+- (void)doRefresh:(CKRefreshControl *)sender {
+   [timelineService getListTimeline:1];
+}
+
+- (void) didFinishSelector:(TimelineService *) respones
 {
-    NSData* data = [respones responseData];
-    [parser parse:data];
-    
+    listTimeline = respones.arrayData;
+    [tableViewTimeline reloadData];
+    [self.refreshControl performSelector:@selector(endRefreshing)];
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -84,35 +74,17 @@
 
 -(void) dealloc
 {
-    [lstTimeline release];
-    [requestData release];
-    [jsonAdapter release];
-    [parser release];
+    [listTimeline release];
+    [timelineService release];
+    [tableViewTimeline release];
     [super dealloc];
 }
-@end
-
-@implementation TimelineController (SBJsonStreamParserAdapterDelegate)
-
-- (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray*)array
-{
-    NSLog(@"Dict: %@",array);
-}
-
-- (void)parser:(SBJsonStreamParser*)parser foundObject:(NSDictionary*)dict
-{
-    JsonParser *jsParser = [[JsonParser alloc] init];
-    lstTimeline = [[jsParser getListTimeline:dict] retain];
-    [tableViewTimeline reloadData];
-    NSLog(@"Dict: %@",dict);
-}
-
 @end
 
 @implementation TimelineController (UITableViewDelegate)
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
-    TimelineEntity *timelineEntity = [lstTimeline objectAtIndex:indexPath.row];
+    TimelineEntity *timelineEntity = [listTimeline objectAtIndex:indexPath.row];
     if(timelineEntity && [timelineEntity.itemType isEqualToString:@"post"])
     {
         static NSString *keyPostId = @"postItem";
@@ -134,10 +106,15 @@
     }
     return nil;
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (lstTimeline) {
-        return [lstTimeline count];
+    if (listTimeline) {
+        return [listTimeline count];
     }else{
         return 0;
     }
@@ -148,4 +125,9 @@
     return 90;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end
+

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "ListPlaceController.h"
 #import "TimelineController.h"
-
 @interface AppDelegate ()
 @property (nonatomic, retain) ListPlaceController *listPlaceController;
 @property (nonatomic, retain) TimelineController *timelineController;
@@ -26,9 +25,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     //Khoi tao view
-    self.listPlaceController = [[ListPlaceController alloc] initWithNibName:@"ListPlaceController" bundle:nil];
-    self.timelineController = [[TimelineController alloc] initWithNibName:@"TimelineController" bundle:nil];
-    
+    //self.listPlaceController = [[ListPlaceController alloc] initWithNibName:@"ListPlaceController" bundle:nil];
+    self.timelineController = [[TimelineController alloc] init];
     //[self.window addSubview:self.listPlaceController.view];
     [self.window addSubview:self.timelineController.view];
     [self.window makeKeyAndVisible];
