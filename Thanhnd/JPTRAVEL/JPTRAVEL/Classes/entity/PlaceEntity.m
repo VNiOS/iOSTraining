@@ -9,20 +9,28 @@
 #import "PlaceEntity.h"
 
 @implementation PlaceEntity
-@synthesize placeId;
-@synthesize name;
-@synthesize urlImage;
+@synthesize placeId,urlImage,name;
 
 -(id) initWithDictionary:(NSDictionary *)dict
 {
     self = [super init];
+    
     if (self) {
+        
         if(dict){
-            self.placeId = [dict valueForKeyPath:@"id"];
-            self.urlImage = [dict valueForKeyPath:@"image_url"];
-            self.name = [dict valueForKeyPath:@"name"];
+            if([dict valueForKey:@"id"] != (id)[NSNull null]){
+                self.placeId = [dict objectForKey:@"id"];
+            }
+            if([dict valueForKey:@"image_url"] != (id)[NSNull null] && [[dict valueForKey:@"image_url"] length] != 0){
+                self.urlImage = [dict objectForKey:@"image_url"];
+                NSLog(@"%@",urlImage);
+            }
+            if([dict valueForKey:@"name"] != (id)[NSNull null] && [[dict valueForKey:@"name"] length] != 0){
+                self.name = [dict objectForKey:@"name"];
+            }
         }
     }
+    
     return self;
 }
 @end
