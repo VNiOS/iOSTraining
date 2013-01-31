@@ -40,7 +40,6 @@
 		DF36A32F16A8EE5600ED8675 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF314AE716A8035000DA9E30 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DF36A33416A8EFFE00ED8675 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A33316A8EFFE00ED8675 /* BaseEntity.m */; };
 		DF36A33716A8F01B00ED8675 /* PlaceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A33616A8F01B00ED8675 /* PlaceEntity.m */; };
-		DF36A33A16A8F47900ED8675 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A33916A8F47900ED8675 /* JsonParser.m */; };
 		DF36A36616A95C6A00ED8675 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A35316A95C6A00ED8675 /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DF36A36716A95C6A00ED8675 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A35516A95C6A00ED8675 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DF36A36816A95C6A00ED8675 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36A35716A95C6A00ED8675 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -87,7 +86,6 @@
 		DFE1121816AE87120000EEE7 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1121716AE87120000EEE7 /* Util.m */; };
 		DFE7112B16ACECA500509293 /* ListPlaceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE7112A16ACECA500509293 /* ListPlaceController.xib */; };
 		DFE7112F16ACED7800509293 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7112E16ACED7800509293 /* BaseViewController.m */; };
-		DFE7113416ACEE8200509293 /* TimelineController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE7113316ACEE8200509293 /* TimelineController.xib */; };
 		DFE7113716ACF1E800509293 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113616ACF1E800509293 /* UserEntity.m */; };
 		DFE7113A16ACFCE600509293 /* EventEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113916ACFCE600509293 /* EventEntity.m */; };
 		DFE7113D16AD164900509293 /* TimelineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7113C16AD164900509293 /* TimelineEntity.m */; };
@@ -176,8 +174,6 @@
 		DF36A33316A8EFFE00ED8675 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		DF36A33516A8F01B00ED8675 /* PlaceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceEntity.h; sourceTree = "<group>"; };
 		DF36A33616A8F01B00ED8675 /* PlaceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceEntity.m; sourceTree = "<group>"; };
-		DF36A33816A8F47900ED8675 /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
-		DF36A33916A8F47900ED8675 /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
 		DF36A35016A95C6A00ED8675 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		DF36A35116A95C6A00ED8675 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		DF36A35216A95C6A00ED8675 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -260,7 +256,6 @@
 		DFE7112A16ACECA500509293 /* ListPlaceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPlaceController.xib; sourceTree = "<group>"; };
 		DFE7112D16ACED7800509293 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DFE7112E16ACED7800509293 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		DFE7113316ACEE8200509293 /* TimelineController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineController.xib; sourceTree = "<group>"; };
 		DFE7113516ACF1E800509293 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
 		DFE7113616ACF1E800509293 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
 		DFE7113816ACFCE600509293 /* EventEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventEntity.h; sourceTree = "<group>"; };
@@ -389,8 +384,6 @@
 		DF314A5A16A7E3E400DA9E30 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				DF36A33816A8F47900ED8675 /* JsonParser.h */,
-				DF36A33916A8F47900ED8675 /* JsonParser.m */,
 				DFE7115B16AD3C7300509293 /* CommonSizes.h */,
 				DFE7115C16AD3C7300509293 /* CommonSizes.m */,
 				DFE1121616AE87120000EEE7 /* Util.h */,
@@ -428,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				DFE7112A16ACECA500509293 /* ListPlaceController.xib */,
-				DFE7113316ACEE8200509293 /* TimelineController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -753,7 +745,6 @@
 				DFDFA1EE16A6900D0040B2C0 /* Default-568h@2x.png in Resources */,
 				DF36A37416A95E6100ED8675 /* icon.png in Resources */,
 				DFE7112B16ACECA500509293 /* ListPlaceController.xib in Resources */,
-				DFE7113416ACEE8200509293 /* TimelineController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +806,6 @@
 				DF314A6316A7E48B00DA9E30 /* ListPlaceController.m in Sources */,
 				DF36A33416A8EFFE00ED8675 /* BaseEntity.m in Sources */,
 				DF36A33716A8F01B00ED8675 /* PlaceEntity.m in Sources */,
-				DF36A33A16A8F47900ED8675 /* JsonParser.m in Sources */,
 				DF36A36616A95C6A00ED8675 /* SDImageCache.m in Sources */,
 				DF36A36716A95C6A00ED8675 /* SDWebImageCompat.m in Sources */,
 				DF36A36816A95C6A00ED8675 /* SDWebImageDecoder.m in Sources */,

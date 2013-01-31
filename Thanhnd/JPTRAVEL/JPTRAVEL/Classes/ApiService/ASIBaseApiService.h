@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
-#import "JsonParser.h"
 #import "ServiceDelegate.h"
 #import "ServiceConfig.h"
 
@@ -29,7 +28,6 @@
 #pragma mark - DECLARE PROPERTY
 @property (nonatomic, retain) ASIHTTPRequest *httpRequestGet;
 @property (nonatomic, retain) ASIFormDataRequest *httpRequestPost;
-@property (nonatomic, retain) JsonParser *jsonParser;
 @property (nonatomic, retain) NSDictionary *dictData;
 @property (nonatomic, retain) NSMutableArray *arrayData;
 

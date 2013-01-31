@@ -114,7 +114,6 @@
     [dictData release];
     [arrayData release];
     [jsonAdapter release];
-    [jsonParser release];
     if(httpRequestGet){
         [httpRequestGet release];
     }

@@ -11,5 +11,5 @@
 FOUNDATION_EXPORT NSString * const SVTimeline;
 
 @interface TimelineService : BaseApiService
--(void) getListTimeline:(int)offset;
+-(void) getListTimelineWithOffset:(int)offset;
 @end

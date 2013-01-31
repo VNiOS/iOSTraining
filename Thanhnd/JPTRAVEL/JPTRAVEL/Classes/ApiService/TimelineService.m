@@ -11,7 +11,7 @@
 NSString * const SVTimeline = @"timeline";
 
 @implementation TimelineService
--(void) getListTimeline:(int)offset{
+-(void) getListTimelineWithOffset:(int)offset{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setValue:[NSNumber numberWithInt:offset] forKey:SVOffset];
     [dict setValue:[NSNumber numberWithInt:SVLimitValue] forKey:SVLimitKey];

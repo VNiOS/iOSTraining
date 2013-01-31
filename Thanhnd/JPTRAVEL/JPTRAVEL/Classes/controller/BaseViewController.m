@@ -29,9 +29,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    baseApiService = [[BaseApiService alloc] init];
-    baseApiService.delegate = self;
-    [baseApiService setDidFinishSelector:@selector(didFinishSelector)];
 }
 
 -(void) didFinishSelector:(BaseApiService *) response

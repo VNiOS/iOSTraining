@@ -15,16 +15,12 @@
 
 @interface TimelineController (){
     NSMutableArray *listTimeline;
+    TimelineService *timelineService;
 }
-@end
-
-@interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
-
 @end
 
 @implementation TimelineController
 @synthesize tableViewTimeline;
-@synthesize timelineService;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,8 +48,9 @@
     
     timelineService = [[TimelineService alloc] init];
     timelineService.delegate = self;
-    [timelineService getListTimeline:1];
     [timelineService setDidFinishSelector:@selector(didFinishSelector:)];
+    [timelineService getListTimelineWithOffset:1];
+    
 }
 
 - (void)doRefresh:(CKRefreshControl *)sender {
@@ -81,6 +78,9 @@
 }
 @end
 
+@interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
+
+@end
 @implementation TimelineController (UITableViewDelegate)
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   

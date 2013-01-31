@@ -13,7 +13,6 @@
     
 }
 @property (nonatomic, retain) UITableView *tableViewTimeline;
-@property (nonatomic,retain) TimelineService *timelineService;
 @property (nonatomic,retain) UIRefreshControl *refreshControl;
 @property(nonatomic) BOOL clearsSelectionOnViewWillAppear;
 @end
