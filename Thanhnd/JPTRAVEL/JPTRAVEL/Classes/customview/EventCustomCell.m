@@ -36,7 +36,7 @@
         lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(SZDescriptionX, SZDescriptionY, SZDescriptionWidth, SZDescriptionHeight)];
         [lblDescription setBackgroundColor:[UIColor clearColor]];
         [lblDescription setFont:[UIFont systemFontOfSize:11]];
-        lblDescription.numberOfLines = 3;
+        lblDescription.numberOfLines = 0;
         [self.contentView addSubview:lblDescription];
         
         lblTime = [[UILabel alloc] initWithFrame:CGRectMake(SZTimeX, SZTimeY, SZTimeWidth, SZTimeHeight)];

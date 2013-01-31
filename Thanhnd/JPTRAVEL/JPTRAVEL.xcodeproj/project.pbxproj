@@ -66,16 +66,7 @@
 		DF68D27E16A7BCEA00652671 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68D27116A7BCEA00652671 /* ASIInputStream.m */; };
 		DF68D27F16A7BCEA00652671 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68D27316A7BCEA00652671 /* ASINetworkQueue.m */; };
 		DF68D28016A7BCEA00652671 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68D27716A7BCEA00652671 /* Reachability.m */; };
-		DFB4C5C816B239A1003EF5EE /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5C716B239A0003EF5EE /* UserService.m */; };
-		DFB4C5CB16B239DB003EF5EE /* AreaService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5CA16B239DA003EF5EE /* AreaService.m */; };
 		DFB4C5CE16B239ED003EF5EE /* PlaceService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5CD16B239EC003EF5EE /* PlaceService.m */; };
-		DFB4C5D116B23A1B003EF5EE /* PostService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5D016B23A1B003EF5EE /* PostService.m */; };
-		DFB4C5D416B23A38003EF5EE /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5D316B23A37003EF5EE /* EventService.m */; };
-		DFB4C5D716B23A76003EF5EE /* SpotService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5D616B23A75003EF5EE /* SpotService.m */; };
-		DFB4C5DA16B23AB3003EF5EE /* BookmarkService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5D916B23AB2003EF5EE /* BookmarkService.m */; };
-		DFB4C5DD16B23B08003EF5EE /* CommentService.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5DC16B23B08003EF5EE /* CommentService.m */; };
-		DFB4C5F216B28FE5003EF5EE /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5F116B28FE5003EF5EE /* CustomTableView.m */; };
-		DFB4C5F516B29157003EF5EE /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4C5F416B29157003EF5EE /* DataLoader.m */; };
 		DFD27A5216AFF0C700E0536F /* TimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD27A5016AFF0C700E0536F /* TimelineController.m */; };
 		DFDFA1D816A6900D0040B2C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDFA1D716A6900D0040B2C0 /* UIKit.framework */; };
 		DFDFA1DA16A6900D0040B2C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDFA1D916A6900D0040B2C0 /* Foundation.framework */; };
@@ -237,26 +228,8 @@
 		DF68D27616A7BCEA00652671 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF68D27716A7BCEA00652671 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DFB4C5B316B0F3E4003EF5EE /* ServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceDelegate.h; sourceTree = "<group>"; };
-		DFB4C5C616B239A0003EF5EE /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
-		DFB4C5C716B239A0003EF5EE /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
-		DFB4C5C916B239DA003EF5EE /* AreaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaService.h; sourceTree = "<group>"; };
-		DFB4C5CA16B239DA003EF5EE /* AreaService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaService.m; sourceTree = "<group>"; };
 		DFB4C5CC16B239EC003EF5EE /* PlaceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceService.h; sourceTree = "<group>"; };
 		DFB4C5CD16B239EC003EF5EE /* PlaceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceService.m; sourceTree = "<group>"; };
-		DFB4C5CF16B23A1A003EF5EE /* PostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostService.h; sourceTree = "<group>"; };
-		DFB4C5D016B23A1B003EF5EE /* PostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostService.m; sourceTree = "<group>"; };
-		DFB4C5D216B23A36003EF5EE /* EventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventService.h; sourceTree = "<group>"; };
-		DFB4C5D316B23A37003EF5EE /* EventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventService.m; sourceTree = "<group>"; };
-		DFB4C5D516B23A74003EF5EE /* SpotService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotService.h; sourceTree = "<group>"; };
-		DFB4C5D616B23A75003EF5EE /* SpotService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotService.m; sourceTree = "<group>"; };
-		DFB4C5D816B23AB1003EF5EE /* BookmarkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkService.h; sourceTree = "<group>"; };
-		DFB4C5D916B23AB2003EF5EE /* BookmarkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkService.m; sourceTree = "<group>"; };
-		DFB4C5DB16B23B07003EF5EE /* CommentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentService.h; sourceTree = "<group>"; };
-		DFB4C5DC16B23B08003EF5EE /* CommentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentService.m; sourceTree = "<group>"; };
-		DFB4C5F016B28FE4003EF5EE /* CustomTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
-		DFB4C5F116B28FE5003EF5EE /* CustomTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
-		DFB4C5F316B29156003EF5EE /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
-		DFB4C5F416B29157003EF5EE /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
 		DFD27A4F16AFF0C700E0536F /* TimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineController.h; sourceTree = "<group>"; };
 		DFD27A5016AFF0C700E0536F /* TimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineController.m; sourceTree = "<group>"; };
 		DFDFA1D316A6900D0040B2C0 /* JPTRAVEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPTRAVEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,16 +376,12 @@
 		DF314A5916A7E3E400DA9E30 /* customview */ = {
 			isa = PBXGroup;
 			children = (
-				DFB4C5F316B29156003EF5EE /* DataLoader.h */,
-				DFB4C5F416B29157003EF5EE /* DataLoader.m */,
 				DFE7115816AD3AB700509293 /* BaseCell.h */,
 				DFE7115916AD3AB700509293 /* BaseCell.m */,
 				DFE7116716AD46C300509293 /* PostCell.h */,
 				DFE7116816AD46C300509293 /* PostCell.m */,
 				DF0306F716AE526700D08B93 /* EventCustomCell.h */,
 				DF0306F816AE526700D08B93 /* EventCustomCell.m */,
-				DFB4C5F016B28FE4003EF5EE /* CustomTableView.h */,
-				DFB4C5F116B28FE5003EF5EE /* CustomTableView.m */,
 			);
 			path = customview;
 			sourceTree = "<group>";
@@ -688,35 +657,21 @@
 		DFE1120E16AE743F0000EEE7 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				DF16846D16B78419003B6053 /* ServiceConfig.h */,
+				DF16846E16B7841A003B6053 /* ServiceConfig.m */,
 				DFE1121016AE74C20000EEE7 /* ASIBaseApiService.h */,
 				DFE1121116AE74C20000EEE7 /* ASIBaseApiService.m */,
 				DF16846216B770F2003B6053 /* AFBaseApiService.h */,
 				DF16846316B770F2003B6053 /* AFBaseApiService.m */,
+				DF16846A16B78264003B6053 /* AFSupportAPIClient.h */,
+				DF16846B16B78265003B6053 /* AFSupportAPIClient.m */,
 				DF16847016B79C51003B6053 /* BaseApiService.h */,
 				DF16847116B79C52003B6053 /* BaseApiService.m */,
 				DFE1121316AE74DE0000EEE7 /* TimelineService.h */,
 				DFE1121416AE74DE0000EEE7 /* TimelineService.m */,
 				DFB4C5B316B0F3E4003EF5EE /* ServiceDelegate.h */,
-				DFB4C5C616B239A0003EF5EE /* UserService.h */,
-				DFB4C5C716B239A0003EF5EE /* UserService.m */,
-				DFB4C5C916B239DA003EF5EE /* AreaService.h */,
-				DFB4C5CA16B239DA003EF5EE /* AreaService.m */,
 				DFB4C5CC16B239EC003EF5EE /* PlaceService.h */,
 				DFB4C5CD16B239EC003EF5EE /* PlaceService.m */,
-				DFB4C5CF16B23A1A003EF5EE /* PostService.h */,
-				DFB4C5D016B23A1B003EF5EE /* PostService.m */,
-				DFB4C5D216B23A36003EF5EE /* EventService.h */,
-				DFB4C5D316B23A37003EF5EE /* EventService.m */,
-				DFB4C5D516B23A74003EF5EE /* SpotService.h */,
-				DFB4C5D616B23A75003EF5EE /* SpotService.m */,
-				DFB4C5D816B23AB1003EF5EE /* BookmarkService.h */,
-				DFB4C5D916B23AB2003EF5EE /* BookmarkService.m */,
-				DFB4C5DB16B23B07003EF5EE /* CommentService.h */,
-				DFB4C5DC16B23B08003EF5EE /* CommentService.m */,
-				DF16846A16B78264003B6053 /* AFSupportAPIClient.h */,
-				DF16846B16B78265003B6053 /* AFSupportAPIClient.m */,
-				DF16846D16B78419003B6053 /* ServiceConfig.h */,
-				DF16846E16B7841A003B6053 /* ServiceConfig.m */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -886,15 +841,7 @@
 				DFE1121516AE74DE0000EEE7 /* TimelineService.m in Sources */,
 				DFE1121816AE87120000EEE7 /* Util.m in Sources */,
 				DFD27A5216AFF0C700E0536F /* TimelineController.m in Sources */,
-				DFB4C5C816B239A1003EF5EE /* UserService.m in Sources */,
-				DFB4C5CB16B239DB003EF5EE /* AreaService.m in Sources */,
 				DFB4C5CE16B239ED003EF5EE /* PlaceService.m in Sources */,
-				DFB4C5D116B23A1B003EF5EE /* PostService.m in Sources */,
-				DFB4C5D416B23A38003EF5EE /* EventService.m in Sources */,
-				DFB4C5D716B23A76003EF5EE /* SpotService.m in Sources */,
-				DFB4C5DA16B23AB3003EF5EE /* BookmarkService.m in Sources */,
-				DFB4C5DD16B23B08003EF5EE /* CommentService.m in Sources */,
-				DFB4C5F216B28FE5003EF5EE /* CustomTableView.m in Sources */,
 				DF16845816B76DDA003B6053 /* AFHTTPClient.m in Sources */,
 				DF16845916B76DDA003B6053 /* AFHTTPRequestOperation.m in Sources */,
 				DF16845A16B76DDA003B6053 /* AFImageRequestOperation.m in Sources */,
@@ -916,7 +863,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDFA20316A6900D0040B2C0 /* JPTRAVELTests.m in Sources */,
-				DFB4C5F516B29157003EF5EE /* DataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

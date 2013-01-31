@@ -8,7 +8,7 @@
 
 #import "AFBaseApiService.h"
 #import "AFSupportAPIClient.h"
-
+#import "AFNetworkActivityIndicatorManager.h"
 @implementation AFBaseApiService
 @synthesize arrayData;
 @synthesize delegate;
@@ -21,6 +21,7 @@
     self = [super init];
     [self setDidFinishSelector:@selector(requestFinished:)];
 	[self setDidFailedSelector:@selector(requestFailed:)];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     return self;
 }
 

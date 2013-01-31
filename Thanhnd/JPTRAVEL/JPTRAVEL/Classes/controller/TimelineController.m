@@ -95,6 +95,7 @@
         [cellPost updateContent:timelineEntity];
         return cellPost;
     }
+    
     if (timelineEntity && [timelineEntity.itemType isEqualToString:@"event"]) {
         static NSString *keyEventId = @"eventItem";
         EventCustomCell *cellEvent = [tableViewTimeline dequeueReusableCellWithIdentifier:keyEventId];
