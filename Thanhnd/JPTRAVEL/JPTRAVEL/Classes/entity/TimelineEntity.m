@@ -7,8 +7,7 @@
 //
 
 #import "TimelineEntity.h"
-#import "AFSupportAPIClient.h"
-#import "TimelineService.h"
+
 @implementation TimelineEntity
 @synthesize itemType,user,post,event;
 -(id) initWithDictionary:(NSDictionary *)dict
@@ -17,7 +16,9 @@
     
     if (self) {
         if(dict){
-            self.itemType = [dict valueForKeyPath:@"item_type"];
+            if([dict valueForKey:@"item_type"] != (id)[NSNull null] && [[dict valueForKey:@"item_type"] length] != 0){
+                self.itemType = [dict objectForKey:@"item_type"];
+            }
             if(itemType && [itemType isEqualToString:@"post"]){
                 self.post = [[PostEntity alloc] initWithDictionary:dict];
             }
@@ -27,6 +28,7 @@
             self.user = [[UserEntity alloc] initWithDictionary:dict];
         }
     }
+
     return self;
 }
 @end
