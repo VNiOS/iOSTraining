@@ -24,7 +24,6 @@
 @implementation ASIBaseApiService
 @synthesize httpRequestGet;
 @synthesize httpRequestPost;
-@synthesize jsonParser;
 @synthesize delegate;
 @synthesize didFinishSelector;
 @synthesize didFailedSelector;

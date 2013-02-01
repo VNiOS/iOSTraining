@@ -30,4 +30,8 @@
 {
     
 }
++(CGFloat)heightForCellWithPost:(id)dataObject
+{
+    return 20.0f;
+}
 @end

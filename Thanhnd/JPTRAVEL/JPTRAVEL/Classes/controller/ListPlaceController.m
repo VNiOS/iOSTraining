@@ -11,7 +11,6 @@
 #import <SBJson/SBJson.h>
 #import <SBJson/SBJsonStreamParserAdapter.h>
 #import <SBJson/SBJsonStreamParser.h>
-#import "JsonParser.h"
 #import "PlaceEntity.h"
 #import <UIImageView+WebCache.h>
 #import "PlaceService.h"

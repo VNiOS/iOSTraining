@@ -7,6 +7,7 @@
 //
 
 #import "BaseCell.h"
+#import "TimelineEntity.h"
 @protocol PostCellDelegate <NSObject>
 
 @optional
@@ -24,10 +25,9 @@
     UILabel *lblBookmarkCount;
     UILabel *lblPlaceName;
     UILabel *lblPostedAt;
-    
     //Delegate
     id<PostCellDelegate> postCellDelegate;
 }
-
 @property (nonatomic, retain)  id<PostCellDelegate> postCellDelegate;
+@property (nonatomic, strong) TimelineEntity *timelineEntity;
 @end

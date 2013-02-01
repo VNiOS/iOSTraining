@@ -10,8 +10,12 @@
 #import "TimelineEntity.h"
 #import "UIImageView+WebCache.h"
 #import "CommonSizes.h"
+#import "Util.h"
+
 @implementation PostCell
 @synthesize postCellDelegate;
+@synthesize timelineEntity;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,45 +24,45 @@
     }
     return self;
 }
+
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        imgPlace = [[UIImageView alloc] initWithFrame:CGRectMake(SZImagePostThumbX, SZImagePostThumbY, SZImagePostThumbWidth, SZImagePostThumbHeight)];
+        imgPlace = [[UIImageView alloc] init];
         [self.contentView addSubview:imgPlace];
         
-        lblUserName = [[UILabel alloc]initWithFrame:CGRectMake(SZUserNameX, SZUserNameY, SZUserNameWidth, SZUserNameHeight)];
+        lblUserName = [[UILabel alloc]init];
         [lblUserName setBackgroundColor:[UIColor clearColor]];
         [lblUserName setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:lblUserName];
         
-        lblDescription = [[UILabel alloc] initWithFrame:CGRectMake(SZDescriptionX, SZDescriptionY, SZDescriptionWidth, SZDescriptionHeight)];
+        lblDescription = [[UILabel alloc] init];
         [lblDescription setBackgroundColor:[UIColor clearColor]];
         [lblDescription setFont:[UIFont systemFontOfSize:11]];
         lblDescription.numberOfLines = 0;
         [self.contentView addSubview:lblDescription];
         
-        lblCommentCount = [[UILabel alloc] initWithFrame:CGRectMake(SZCommentCountX, SZCommentCountY, SZCommentCountWidth, SZCommentCountHeight)];
+        lblCommentCount = [[UILabel alloc] init];
         [lblCommentCount setBackgroundColor:[UIColor clearColor]];
         [lblCommentCount setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblCommentCount];
-        
-        lblBookmarkCount = [[UILabel alloc] initWithFrame:CGRectMake(SZBookmarkCountX, SZBookmarkCountY, SZCommentCountWidth, SZBookmarkCountHeight)];
+
+        lblBookmarkCount = [[UILabel alloc] init];
         [lblBookmarkCount setBackgroundColor:[UIColor clearColor]];
         [lblBookmarkCount setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblBookmarkCount];
-        
-        lblPlaceName = [[UILabel alloc] initWithFrame:CGRectMake(SZPlaceNameX, SZPlaceNameY, SZPlaceNameWidth, SZPlaceNameHeight)];
+
+        lblPlaceName = [[UILabel alloc] init];
         [lblPlaceName setBackgroundColor:[UIColor clearColor]];
         [lblPlaceName setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:lblPlaceName];
-        
-        imgUserAvatar = [[UIImageView alloc] initWithFrame:CGRectMake(SZUserAvatarX, SZUserAvatarY, SZUserAvatarWidth, SZUserAvatarHeight)];
+
+        imgUserAvatar = [[UIImageView alloc] init];
         [self.contentView addSubview:imgUserAvatar];
         
-        lblPostedAt = [[UILabel alloc] initWithFrame:CGRectMake(SZPostAtX, SZPostAtY, SZPostAtWidth, SZPostAtHeight)];
-        [lblPostedAt setBackgroundColor:[UIColor clearColor]];
+        lblPostedAt = [[UILabel alloc] init];
         [lblPostedAt setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:lblPostedAt];
         
@@ -69,6 +73,7 @@
 -(void) dealloc
 {
     [super dealloc];
+    [timelineEntity release];
     [lblBookmarkCount release];
     [lblCommentCount release];
     [lblUserName release];
@@ -78,27 +83,46 @@
     [imgPlace release];
 }
 
++ (CGFloat)heightForCellWithPost:(id)objectData {
+    TimelineEntity *timelineEntity = (TimelineEntity *) objectData;
+    CGSize sizeToFit = [timelineEntity.post.description sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(170.0f, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+    
+    return fmaxf(90.0f, sizeToFit.height + 70.0f);
+}
+
+-(void) layoutSubviews
+{
+    [super layoutSubviews];
+    
+    imgPlace.frame = CGRectMake(10.0f, 10.0f, 70.0f, 70.0f);
+    
+    lblUserName.frame = CGRectMake(90.0f, 10.0f, 170.0f, 15.0f);
+    CGRect descTextFrame = CGRectOffset(lblUserName.frame, 0.0f, lblPlaceName.frame.size.height + 5);
+    descTextFrame.size.height = [[self class] heightForCellWithPost:timelineEntity] - 70.0f;
+    lblDescription.frame = descTextFrame;
+    float OFFSET = descTextFrame.size.height - 20.0f;
+    lblCommentCount.frame = CGRectMake(90.0f, 60.0f + OFFSET, 70.0f, 10.0f);
+    lblBookmarkCount.frame = CGRectMake(180.0f, 60.0f + OFFSET, 70.0f, 10.0f);
+    lblPlaceName.frame = CGRectMake(90.0f, 73.0f + OFFSET, 170.0f, 10.0f);
+    
+    imgUserAvatar.frame = CGRectMake(270.0f, 10.0f, 40.0f, 40.0f);
+    lblPostedAt.frame = CGRectMake(270.0f, 60.0f, 40.0f, 10.0f);
+}
 -(void) updateContent:(id)objectData
 {
-    TimelineEntity *timelineEntity = (TimelineEntity *) objectData;
+    timelineEntity = (TimelineEntity *) objectData;
     if(timelineEntity){
         [imgPlace setImageWithURL:[NSURL URLWithString:timelineEntity.post.postThumbUrl] placeholderImage:[UIImage imageNamed:@"icon.png"]];
-        [lblUserName setText:timelineEntity.user.userName];
-        [lblDescription setText:timelineEntity.post.description];
-        [lblCommentCount setText:[NSString stringWithFormat:@"Comment %d",timelineEntity.post.commentCount]];
-        [lblBookmarkCount setText:[NSString stringWithFormat:@"Bookmark %d",timelineEntity.post.bookmarkCount]];
-        [lblPlaceName setText:timelineEntity.post.placeName];
+        lblUserName.text = timelineEntity.user.userName;
+        lblDescription.text = timelineEntity.post.description;
+        lblCommentCount.text = [NSString stringWithFormat:@"Comment %d",timelineEntity.post.commentCount];
+        
+        lblBookmarkCount.text = [NSString stringWithFormat:@"Bookmark %d",timelineEntity.post.bookmarkCount];
+        lblPlaceName.text = [NSString stringWithFormat:@"at: %@",timelineEntity.post.placeName];
         [imgUserAvatar setImageWithURL:[NSURL URLWithString:timelineEntity.user.userAvatar] placeholderImage:[UIImage imageNamed:@"icon.png"]];
-        [lblPostedAt setText:timelineEntity.post.postedAt];
+        lblPostedAt.text = timelineEntity.post.postedAt;
+        
     }
+    [super setNeedsLayout];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 @end

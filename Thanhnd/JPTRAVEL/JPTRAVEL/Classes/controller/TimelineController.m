@@ -19,6 +19,10 @@
 }
 @end
 
+@interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
+
+@end
+
 @implementation TimelineController
 @synthesize tableViewTimeline;
 
@@ -48,13 +52,12 @@
     
     timelineService = [[TimelineService alloc] init];
     timelineService.delegate = self;
-    [timelineService setDidFinishSelector:@selector(didFinishSelector:)];
     [timelineService getListTimelineWithOffset:1];
-    
+    [timelineService setDidFinishSelector:@selector(didFinishSelector:)];
 }
 
 - (void)doRefresh:(CKRefreshControl *)sender {
-   [timelineService getListTimeline:1];
+   [timelineService getListTimelineWithOffset:1];
 }
 
 - (void) didFinishSelector:(TimelineService *) respones
@@ -78,14 +81,11 @@
 }
 @end
 
-@interface TimelineController (UITableViewDelegate) <UITableViewDelegate>
-
-@end
 @implementation TimelineController (UITableViewDelegate)
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     TimelineEntity *timelineEntity = [listTimeline objectAtIndex:indexPath.row];
-    if(timelineEntity && [timelineEntity.itemType isEqualToString:@"post"])
+    if(timelineEntity && [@"post" isEqualToString:timelineEntity.itemType ])
     {
         static NSString *keyPostId = @"postItem";
         PostCell *cellPost = [tableViewTimeline dequeueReusableCellWithIdentifier:keyPostId];
@@ -95,8 +95,7 @@
         [cellPost updateContent:timelineEntity];
         return cellPost;
     }
-    
-    if (timelineEntity && [timelineEntity.itemType isEqualToString:@"event"]) {
+    if (timelineEntity && [@"event" isEqualToString:timelineEntity.itemType]) {
         static NSString *keyEventId = @"eventItem";
         EventCustomCell *cellEvent = [tableViewTimeline dequeueReusableCellWithIdentifier:keyEventId];
         if (cellEvent == nil) {
@@ -123,6 +122,11 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TimelineEntity *timelineEntity = [listTimeline objectAtIndex:indexPath.row];
+    if(timelineEntity && [@"post" isEqualToString:timelineEntity.itemType])
+    {
+        return [PostCell heightForCellWithPost:timelineEntity];
+    }
     return 90;
 }
 

@@ -18,7 +18,7 @@ const int SZImagePostThumbWidth = 70;
 
 const int SZUserNameX = 90;
 const int SZUserNameY = 10;
-const int SZUserNameHeight = 10;
+const int SZUserNameHeight = 15;
 const int SZUserNameWidth = 140;
 
 const int SZDescriptionX = 90;
@@ -38,7 +38,7 @@ const int SZBookmarkCountWidth = 70;
 
 const int SZPlaceNameX = 90;
 const int SZPlaceNameY = 73;
-const int SZPlaceNameHeight = 10;
+const int SZPlaceNameHeight = 15;
 const int SZPlaceNameWidth = 140;
 
 const int SZUserAvatarX = 270;

@@ -24,6 +24,7 @@
 		DF16846C16B78266003B6053 /* AFSupportAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DF16846B16B78265003B6053 /* AFSupportAPIClient.m */; };
 		DF16846F16B7841A003B6053 /* ServiceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DF16846E16B7841A003B6053 /* ServiceConfig.m */; };
 		DF16847216B79C54003B6053 /* BaseApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = DF16847116B79C52003B6053 /* BaseApiService.m */; };
+		DF30864716BB606000F61BF2 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF30864616BB605F00F61BF2 /* BaseTableViewController.m */; };
 		DF314A5616A7D6A600DA9E30 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF314A5516A7D6A600DA9E30 /* ImageIO.framework */; };
 		DF314A6316A7E48B00DA9E30 /* ListPlaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */; };
 		DF36A31816A8EE5600ED8675 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = DF314AD016A8035000DA9E30 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -142,6 +143,8 @@
 		DF16846E16B7841A003B6053 /* ServiceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConfig.m; sourceTree = "<group>"; };
 		DF16847016B79C51003B6053 /* BaseApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseApiService.h; sourceTree = "<group>"; };
 		DF16847116B79C52003B6053 /* BaseApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApiService.m; sourceTree = "<group>"; };
+		DF30864516BB605F00F61BF2 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		DF30864616BB605F00F61BF2 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		DF314A5516A7D6A600DA9E30 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DF314A6016A7E48B00DA9E30 /* ListPlaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPlaceController.h; sourceTree = "<group>"; };
 		DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPlaceController.m; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				DF314A6116A7E48B00DA9E30 /* ListPlaceController.m */,
 				DFE7112D16ACED7800509293 /* BaseViewController.h */,
 				DFE7112E16ACED7800509293 /* BaseViewController.m */,
+				DF30864516BB605F00F61BF2 /* BaseTableViewController.h */,
+				DF30864616BB605F00F61BF2 /* BaseTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -845,6 +850,7 @@
 				DF16846C16B78266003B6053 /* AFSupportAPIClient.m in Sources */,
 				DF16846F16B7841A003B6053 /* ServiceConfig.m in Sources */,
 				DF16847216B79C54003B6053 /* BaseApiService.m in Sources */,
+				DF30864716BB606000F61BF2 /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

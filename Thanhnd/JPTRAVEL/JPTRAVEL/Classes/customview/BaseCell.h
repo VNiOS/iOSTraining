@@ -22,4 +22,6 @@
 @property (nonatomic, retain) id<BaseCellDelegate> baseCellDelegate;
 
 -(void) updateContent:(id) objectData;
+
++ (CGFloat)heightForCellWithPost:(id)dataObject;
 @end
