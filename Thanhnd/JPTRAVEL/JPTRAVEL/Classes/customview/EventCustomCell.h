@@ -7,7 +7,7 @@
 //
 
 #import "BaseCell.h"
-
+#import "TimelineEntity.h"
 @interface EventCustomCell : BaseCell
 {
     UIImageView *imgPlace;
@@ -15,5 +15,5 @@
     UILabel *lblDescription;
     UILabel *lblTime;
 }
-
+@property (nonatomic, strong) TimelineEntity *timelineEntity;
 @end

@@ -30,11 +30,11 @@
             if([dict valueForKey:@"name"] != (id)[NSNull null] && [[dict valueForKey:@"name"] length] != 0){
                 self.name = [dict objectForKey:@"name"];
             }
-            if([dict valueForKey:@"start_time"] != (id)[NSNull null] && [[dict valueForKey:@"start_time"] length] != 0){
-                self.startTime = [dict objectForKey:@"start_time"];
+            if([dict valueForKey:@"start_at"] != (id)[NSNull null] && [[dict valueForKey:@"start_at"] length] != 0){
+                self.startTime = [Util formatDateWithString:[dict objectForKey:@"start_at"]];
             }
-            if([dict valueForKey:@"end_time"] != (id)[NSNull null] && [[dict valueForKey:@"end_time"] length] != 0){
-                self.endTime = [dict objectForKey:@"end_time"];
+            if([dict valueForKey:@"end_at"] != (id)[NSNull null] && [[dict valueForKey:@"end_at"] length] != 0){
+                self.endTime = [Util formatDateWithString:[dict objectForKey:@"end_at"]];
             }
             
         }

@@ -26,11 +26,12 @@
     // Configure the view for the selected state
 }
 
--(void) updateContent:(id)objectData
+-(void) updateContent:(id) dataObject
 {
     
 }
-+(CGFloat)heightForCellWithPost:(id)dataObject
+
++(CGFloat)heightForCellWithData:(id)dataObject
 {
     return 20.0f;
 }

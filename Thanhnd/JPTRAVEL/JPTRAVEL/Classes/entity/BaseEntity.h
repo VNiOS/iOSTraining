@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Util.h"
 @interface BaseEntity : NSObject
 -(id) initWithDictionary:(NSDictionary *)dict;
 @end

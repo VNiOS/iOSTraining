@@ -125,7 +125,11 @@
     TimelineEntity *timelineEntity = [listTimeline objectAtIndex:indexPath.row];
     if(timelineEntity && [@"post" isEqualToString:timelineEntity.itemType])
     {
-        return [PostCell heightForCellWithPost:timelineEntity];
+        return [PostCell heightForCellWithData:timelineEntity];
+    }
+    if(timelineEntity && [@"event" isEqualToString:timelineEntity.itemType])
+    {
+        return [EventCustomCell heightForCellWithData:timelineEntity];
     }
     return 90;
 }

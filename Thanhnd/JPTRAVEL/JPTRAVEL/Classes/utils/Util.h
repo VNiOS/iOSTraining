@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface Util : NSObject
 + (NSString *) append:(id) first, ...;
@@ -22,4 +24,8 @@
 + (NSString *)convertDateToString:(NSDate *)date;
 
 + (NSDate *)convertStringToDate:(NSString *)string;
+
++(NSString *) formatDateWithString:(NSString *) string;
+
++(NSString *) formatDateRangeStart:(NSString *) start end:(NSString *) end;
 @end

@@ -63,7 +63,7 @@
         [self.contentView addSubview:imgUserAvatar];
         
         lblPostedAt = [[UILabel alloc] init];
-        [lblPostedAt setFont:[UIFont systemFontOfSize:11]];
+        [lblPostedAt setFont:[UIFont systemFontOfSize:10]];
         [self.contentView addSubview:lblPostedAt];
         
     }
@@ -82,8 +82,7 @@
     [imgUserAvatar release];
     [imgPlace release];
 }
-
-+ (CGFloat)heightForCellWithPost:(id)objectData {
++ (CGFloat)heightForCellWithData:(id)objectData {
     TimelineEntity *timelineEntity = (TimelineEntity *) objectData;
     CGSize sizeToFit = [timelineEntity.post.description sizeWithFont:[UIFont systemFontOfSize:11.0f] constrainedToSize:CGSizeMake(170.0f, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
     
@@ -97,8 +96,8 @@
     imgPlace.frame = CGRectMake(10.0f, 10.0f, 70.0f, 70.0f);
     
     lblUserName.frame = CGRectMake(90.0f, 10.0f, 170.0f, 15.0f);
-    CGRect descTextFrame = CGRectOffset(lblUserName.frame, 0.0f, lblPlaceName.frame.size.height + 5);
-    descTextFrame.size.height = [[self class] heightForCellWithPost:timelineEntity] - 70.0f;
+    CGRect descTextFrame = CGRectOffset(lblUserName.frame, 0.0f, 20.0f);
+    descTextFrame.size.height = [[self class] heightForCellWithData:timelineEntity] - 70.0f;
     lblDescription.frame = descTextFrame;
     float OFFSET = descTextFrame.size.height - 20.0f;
     lblCommentCount.frame = CGRectMake(90.0f, 60.0f + OFFSET, 70.0f, 10.0f);
@@ -106,8 +105,9 @@
     lblPlaceName.frame = CGRectMake(90.0f, 73.0f + OFFSET, 170.0f, 10.0f);
     
     imgUserAvatar.frame = CGRectMake(270.0f, 10.0f, 40.0f, 40.0f);
-    lblPostedAt.frame = CGRectMake(270.0f, 60.0f, 40.0f, 10.0f);
+    lblPostedAt.frame = CGRectMake(265.0f, 60.0f, 50.0f, 10.0f);
 }
+
 -(void) updateContent:(id)objectData
 {
     timelineEntity = (TimelineEntity *) objectData;

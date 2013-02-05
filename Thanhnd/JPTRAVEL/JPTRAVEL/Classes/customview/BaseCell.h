@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Util.h"
 @protocol BaseCellDelegate <NSObject>
 
 @optional
@@ -21,7 +21,7 @@
 
 @property (nonatomic, retain) id<BaseCellDelegate> baseCellDelegate;
 
--(void) updateContent:(id) objectData;
+-(void) updateContent:(id) dataObject;
 
-+ (CGFloat)heightForCellWithPost:(id)dataObject;
++ (CGFloat)heightForCellWithData:(id)dataObject;
 @end

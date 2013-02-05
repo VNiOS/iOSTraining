@@ -29,7 +29,7 @@
                 self.placeName = [dict objectForKey:@"place_name"];
             }
             if([dict valueForKey:@"posted_at"] != (id)[NSNull null] && [[dict valueForKey:@"posted_at"] length] != 0){
-                self.postedAt = [dict objectForKey:@"posted_at"];
+                self.postedAt = [Util formatDateRangeStart:[dict objectForKey:@"posted_at"] end:nil];
             }
             if([dict valueForKey:@"post_thumb_url"] != (id)[NSNull null] && [[dict valueForKey:@"post_thumb_url"] length] != 0){
                 self.postThumbUrl = [dict objectForKey:@"post_thumb_url"];

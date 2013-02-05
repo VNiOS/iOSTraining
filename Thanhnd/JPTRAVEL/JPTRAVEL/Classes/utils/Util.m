@@ -93,4 +93,18 @@
     return [dateFormat stringFromDate:date];
 }
 
++(NSString *) formatDateWithString:(NSString *) string
+{
+    NSDate *date = [[self class] convertStringToDate:string];
+    return [[self class] convertDateToString:date];
+}
++(NSString *) formatDateRangeStart:(NSString *) start end:(NSString *) end
+{
+    NSDate *startDate = [[self class] convertStringToDate:start];
+    NSDate *endDate = [NSDate date];
+    if(end){
+        endDate = [[self class] convertStringToDate:end];
+    }
+    return [[self class] timefrom:startDate toDate:endDate];
+}
 @end
