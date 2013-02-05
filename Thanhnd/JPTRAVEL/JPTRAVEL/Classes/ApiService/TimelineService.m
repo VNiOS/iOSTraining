@@ -26,6 +26,7 @@ NSString * const SVTimeline = @"timeline";
     for (NSDictionary *dic in arrPlaces) {
         TimelineEntity *timeline = [[TimelineEntity alloc] initWithDictionary:dic];
         [arrayData addObject:timeline];
+        NSLog(@"%@", timeline);
     }
     [super buildData];
 }
