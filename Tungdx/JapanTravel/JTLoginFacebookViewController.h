@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "JTLoginService.h"
-#import "JTFacebookConnection.h"
 
-@interface JTLoginFacebookViewController : UIViewController<JTBaseServiceDelegate, JTFacebookDelegate>
+
+@interface JTLoginFacebookViewController : UIViewController<JTBaseServiceDelegate>
 
 @end

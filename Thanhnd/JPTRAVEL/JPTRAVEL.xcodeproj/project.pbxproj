@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF01FD5816D23215000CE270 /* ALTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF01FD5716D23215000CE270 /* ALTableViewController.m */; };
 		DF0306F916AE526700D08B93 /* EventCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0306F816AE526700D08B93 /* EventCustomCell.m */; };
 		DF03070916AE66C600D08B93 /* CKRefreshArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070516AE66C600D08B93 /* CKRefreshArrowView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		DF03070A16AE66C600D08B93 /* CKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DF03070816AE66C600D08B93 /* CKRefreshControl.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -95,6 +96,17 @@
 		DFE7115A16AD3AB700509293 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115916AD3AB700509293 /* BaseCell.m */; };
 		DFE7115D16AD3C7300509293 /* CommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7115C16AD3C7300509293 /* CommonSizes.m */; };
 		DFE7116916AD46C300509293 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7116816AD46C300509293 /* PostCell.m */; };
+		DFF6664C16D32C5300BB8984 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6664B16D32C5300BB8984 /* TestTableViewController.m */; };
+		DFF6665516D3319300BB8984 /* JTLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6665416D3319300BB8984 /* JTLoadMoreCell.m */; };
+		DFF6667C16D33CE500BB8984 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF6667416D33CE500BB8984 /* blackArrow.png */; };
+		DFF6667D16D33CE500BB8984 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF6667516D33CE500BB8984 /* blueArrow.png */; };
+		DFF6667E16D33CE500BB8984 /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF6667616D33CE500BB8984 /* blueArrow_new.png */; };
+		DFF6667F16D33CE500BB8984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6667816D33CE500BB8984 /* EGORefreshTableHeaderView.m */; };
+		DFF6668016D33CE500BB8984 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6667A16D33CE500BB8984 /* PullToRefreshTableViewController.m */; };
+		DFF6668116D33CE500BB8984 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF6667B16D33CE500BB8984 /* whiteArrow.png */; };
+		DFF6668416D33EAB00BB8984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6667816D33CE500BB8984 /* EGORefreshTableHeaderView.m */; };
+		DFF6668516D33EAB00BB8984 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6667A16D33CE500BB8984 /* PullToRefreshTableViewController.m */; };
+		DFF6668616D33ED000BB8984 /* JTLoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF6665416D3319300BB8984 /* JTLoadMoreCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +120,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF01FD5616D23215000CE270 /* ALTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTableViewController.h; sourceTree = "<group>"; };
+		DF01FD5716D23215000CE270 /* ALTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTableViewController.m; sourceTree = "<group>"; };
 		DF0306F716AE526700D08B93 /* EventCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCustomCell.h; sourceTree = "<group>"; };
 		DF0306F816AE526700D08B93 /* EventCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCustomCell.m; sourceTree = "<group>"; };
 		DF03070416AE66C600D08B93 /* CKRefreshArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshArrowView.h; sourceTree = "<group>"; };
@@ -275,6 +289,18 @@
 		DFE7115C16AD3C7300509293 /* CommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSizes.m; sourceTree = "<group>"; };
 		DFE7116716AD46C300509293 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		DFE7116816AD46C300509293 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		DFF6664A16D32C5300BB8984 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		DFF6664B16D32C5300BB8984 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
+		DFF6665316D3319300BB8984 /* JTLoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLoadMoreCell.h; sourceTree = "<group>"; };
+		DFF6665416D3319300BB8984 /* JTLoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTLoadMoreCell.m; sourceTree = "<group>"; };
+		DFF6667416D33CE500BB8984 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		DFF6667516D33CE500BB8984 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		DFF6667616D33CE500BB8984 /* blueArrow_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow_new.png; sourceTree = "<group>"; };
+		DFF6667716D33CE500BB8984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		DFF6667816D33CE500BB8984 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		DFF6667916D33CE500BB8984 /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
+		DFF6667A16D33CE500BB8984 /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
+		DFF6667B16D33CE500BB8984 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +395,10 @@
 				DFE7112E16ACED7800509293 /* BaseViewController.m */,
 				DF30864516BB605F00F61BF2 /* BaseTableViewController.h */,
 				DF30864616BB605F00F61BF2 /* BaseTableViewController.m */,
+				DF01FD5616D23215000CE270 /* ALTableViewController.h */,
+				DF01FD5716D23215000CE270 /* ALTableViewController.m */,
+				DFF6664A16D32C5300BB8984 /* TestTableViewController.h */,
+				DFF6664B16D32C5300BB8984 /* TestTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -376,6 +406,8 @@
 		DF314A5916A7E3E400DA9E30 /* customview */ = {
 			isa = PBXGroup;
 			children = (
+				DFF6665316D3319300BB8984 /* JTLoadMoreCell.h */,
+				DFF6665416D3319300BB8984 /* JTLoadMoreCell.m */,
 				DFE7115816AD3AB700509293 /* BaseCell.h */,
 				DFE7115916AD3AB700509293 /* BaseCell.m */,
 				DFE7116716AD46C300509293 /* PostCell.h */,
@@ -512,6 +544,7 @@
 		DF68D25E16A7BCA600652671 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DFF6667316D33CE500BB8984 /* EGORefreshTableView */,
 				DF16844416B76DDA003B6053 /* AFNetworking */,
 				DF314ACE16A8035000DA9E30 /* SBJSON */,
 				DF03070316AE66C600D08B93 /* CKRefreshControl */,
@@ -673,6 +706,21 @@
 			path = ApiService;
 			sourceTree = "<group>";
 		};
+		DFF6667316D33CE500BB8984 /* EGORefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DFF6667416D33CE500BB8984 /* blackArrow.png */,
+				DFF6667516D33CE500BB8984 /* blueArrow.png */,
+				DFF6667616D33CE500BB8984 /* blueArrow_new.png */,
+				DFF6667716D33CE500BB8984 /* EGORefreshTableHeaderView.h */,
+				DFF6667816D33CE500BB8984 /* EGORefreshTableHeaderView.m */,
+				DFF6667916D33CE500BB8984 /* PullToRefreshTableViewController.h */,
+				DFF6667A16D33CE500BB8984 /* PullToRefreshTableViewController.m */,
+				DFF6667B16D33CE500BB8984 /* whiteArrow.png */,
+			);
+			path = EGORefreshTableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -758,6 +806,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDFA20016A6900D0040B2C0 /* InfoPlist.strings in Resources */,
+				DFF6667C16D33CE500BB8984 /* blackArrow.png in Resources */,
+				DFF6667D16D33CE500BB8984 /* blueArrow.png in Resources */,
+				DFF6667E16D33CE500BB8984 /* blueArrow_new.png in Resources */,
+				DFF6668116D33CE500BB8984 /* whiteArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +836,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF6668616D33ED000BB8984 /* JTLoadMoreCell.m in Sources */,
+				DFF6668416D33EAB00BB8984 /* EGORefreshTableHeaderView.m in Sources */,
+				DFF6668516D33EAB00BB8984 /* PullToRefreshTableViewController.m in Sources */,
 				DF36A37016A95D4900ED8675 /* MKAnnotationView+WebCache.m in Sources */,
 				DF36A31816A8EE5600ED8675 /* NSObject+SBJson.m in Sources */,
 				DF36A31B16A8EE5600ED8675 /* SBJsonParser.m in Sources */,
@@ -851,6 +906,8 @@
 				DF16846F16B7841A003B6053 /* ServiceConfig.m in Sources */,
 				DF16847216B79C54003B6053 /* BaseApiService.m in Sources */,
 				DF30864716BB606000F61BF2 /* BaseTableViewController.m in Sources */,
+				DF01FD5816D23215000CE270 /* ALTableViewController.m in Sources */,
+				DFF6664C16D32C5300BB8984 /* TestTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +916,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDFA20316A6900D0040B2C0 /* JPTRAVELTests.m in Sources */,
+				DFF6665516D3319300BB8984 /* JTLoadMoreCell.m in Sources */,
+				DFF6667F16D33CE500BB8984 /* EGORefreshTableHeaderView.m in Sources */,
+				DFF6668016D33CE500BB8984 /* PullToRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,7 +974,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -935,7 +995,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

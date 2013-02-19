@@ -7,7 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
-
+#import "TestTableViewController.h"
 @interface BaseTableViewController ()
 
 @end
@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    TestTableViewController *tableViewController = [[TestTableViewController alloc] init];
+    tableViewController.enableRefreshHeader = YES;
+    [self.view addSubview:tableViewController.view];
 }
 
 - (void)didReceiveMemoryWarning

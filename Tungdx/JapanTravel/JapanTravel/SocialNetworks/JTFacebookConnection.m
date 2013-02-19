@@ -7,7 +7,6 @@
 //
 
 #import "JTFacebookConnection.h"
-#import <FacebookSDK/FacebookSDK.h>
 #import "JTFacebookEntity.h"
 @implementation JTFacebookConnection
 @synthesize delegate=_delegate;

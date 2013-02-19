@@ -53,22 +53,22 @@
     }
 }
 
-- (void)loginFacebook
-{
-    JTFacebookConnection *fbconnect = [[JTFacebookConnection alloc] init];
-    [fbconnect setDelegate:self];
-    
-    [fbconnect loginFacebook];
-}
-
-- (void)loginFacebookSuccess:(JTFacebookEntity *)object
-{
-    if(object)
-    {
-        JTLoginService *login = [[JTLoginService alloc] initWithDelegate:self];
-        [login LoginAsFacebookAccount:object.sid andName:object.name andAvata:object.avatar andFacebookAcesstoken:object.accessToken];
-    }
-}
+//- (void)loginFacebook
+//{
+//    JTFacebookConnection *fbconnect = [[JTFacebookConnection alloc] init];
+//    [fbconnect setDelegate:self];
+//    
+//    [fbconnect loginFacebook];
+//}
+//
+//- (void)loginFacebookSuccess:(JTFacebookEntity *)object
+//{
+//    if(object)
+//    {
+//        JTLoginService *login = [[JTLoginService alloc] initWithDelegate:self];
+//        [login LoginAsFacebookAccount:object.sid andName:object.name andAvata:object.avatar andFacebookAcesstoken:object.accessToken];
+//    }
+//}
 
 - (void)responseDataSuccessFromService:(NSObject *)object error:(BaseResponseEntity *)error
 {

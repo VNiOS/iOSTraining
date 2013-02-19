@@ -9,9 +9,13 @@
 #import "AppDelegate.h"
 #import "ListPlaceController.h"
 #import "TimelineController.h"
+#import "ALTableViewController.h"
+#import "BaseTableViewController.h"
 @interface AppDelegate ()
 @property (nonatomic, retain) ListPlaceController *listPlaceController;
 @property (nonatomic, retain) TimelineController *timelineController;
+@property (nonatomic, retain) ALTableViewController *tableViewController;
+@property (nonatomic, retain) BaseTableViewController *baseTableViewController;
 @end
 
 @implementation AppDelegate
@@ -26,9 +30,10 @@
     
     //Khoi tao view
     //self.listPlaceController = [[ListPlaceController alloc] initWithNibName:@"ListPlaceController" bundle:nil];
-    self.timelineController = [[TimelineController alloc] init];
+    //self.timelineController = [[TimelineController alloc] init];
+    self.baseTableViewController = [[BaseTableViewController alloc] init];
     //[self.window addSubview:self.listPlaceController.view];
-    [self.window addSubview:self.timelineController.view];
+    [self.window addSubview:self.baseTableViewController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
